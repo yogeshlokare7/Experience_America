@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc 
+       	http://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<bean id="dbProperties"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="location" value="classpath:db.properties" />
+	</bean>
+
+	<!-- DB Configuration -->
+	<!-- 1.DMDS Obj -->
+	<bean class="org.springframework.jdbc.datasource.DriverManagerDataSource"
+		name="dsObj">
+		<property name="driverClassName" value="${driverClassName}" />
+		<property name="url" value="${url}" />
+		<property name="username" value="${username}" />
+		<property name="password" value="${password}" />
+	</bean>
+
+	<!-- 2.ASFB Obj -->
+	<bean
+		class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean"
+		name="sfObj">
+		<property name="dataSource">
+			<ref bean="dsObj" />
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+			</props>
+		</property>
+
+		<property name="annotatedClasses">
+
+		</property>
+	</bean>
+
+	<!-- 3.HT Obj -->
+	<bean class="org.springframework.orm.hibernate3.HibernateTemplate"
+		name="htObj">
+		<property name="sessionFactory">
+			<ref bean="sfObj" />
+		</property>
+	</bean>
+
+	<mvc:annotation-driven />
+	<mvc:resources mapping="/resources/**" location="/resources/" />
+
+	<bean id="messageSource"
+		class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+		<property name="basenames">
+			<list>
+				<value>classpath:validation</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/webapp/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+
+	<!-- Tiles configuration
+	<bean id="tilesConfigurer"
+		class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
+		<property name="definitions">
+			<list>
+				<value>/WEB-INF/tiles/tiles-definitions.xml</value>
+			</list>
+		</property>
+	</bean> -->
+
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="maxUploadSize" value="20848820" />
+	</bean>
+
+	<bean id="viewResolver"
+		class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+		<property name="viewClass"
+			value="org.springframework.web.servlet.view.tiles3.TilesView" />
+	</bean>
+
+	<bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+		<property name="host" value="mail.tls.host" />
+		<property name="port" value="587" />
+		<property name="username" value="opmssupport@mjbsystems.com" />
+		<property name="password" value="Mjb!@#123" />
+		<property name="javaMailProperties">
+			<props>
+				<prop key="mail.tls.auth">true</prop>
+				<prop key="mail.tls.starttls.enable">true</prop>
+				<prop key="mail.debug">true</prop>
+				<prop key="mail.tls.socketFactory.class">javax.net.tls.SSLSocketFactory</prop>
+				<prop key="mail.transport.protocol.">tls</prop>
+				<prop key="mail.tls.socketFactory.fallback">true</prop>
+				<prop key="mail.tls.ssl.enable">true</prop>
+			</props>
+		</property>
+	</bean>
+</beans>  
+  
