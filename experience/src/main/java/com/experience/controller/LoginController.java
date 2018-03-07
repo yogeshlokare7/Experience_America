@@ -25,5 +25,14 @@ public class LoginController {
 		mv.addObject("name", name);
 		return mv;
 	}
+	
+	@RequestMapping(value = "/login", method = RequestMethod.GET) 
+	public String loginPage() {
+		return "login";    
+	}
 
+	@RequestMapping(value = "/reset", method = RequestMethod.GET) 
+	public String resetPage() {
+		return "reset";    
+	}
 }
