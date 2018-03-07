@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.experience.entity.TblUser;
+import com.experience.entity.User;
 import com.experience.service.UserService;
 
 
@@ -21,14 +21,14 @@ public class UserController {
 	
 	@RequestMapping(value = "/users", method = RequestMethod.GET)
 	public String getCountries(Model model) {
-		List<TblUser> users = userService.getUsers();
+		List<User> users = userService.getUsers();
 		model.addAttribute("users", users);
 		return "userlist";
 	}
 	
 	@RequestMapping(value = "/user/{id}", method = RequestMethod.GET)
 	public String getUserById(@PathVariable("id") Integer id, Model model) {
-		TblUser user = userService.getUser(id);
+		User user = userService.getUser(id);
 		model.addAttribute("user", user);
 		return "userview";
 	}
