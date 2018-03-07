@@ -1,4 +1,4 @@
-package com.ea.report;
+package com.experience.report;
 
 public class ExcelReport {
 

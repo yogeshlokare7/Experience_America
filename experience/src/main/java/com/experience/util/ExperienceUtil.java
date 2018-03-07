@@ -1,4 +1,4 @@
-package com.ea.util;
+package com.experience.util;
 
 public class ExperienceUtil {
 
