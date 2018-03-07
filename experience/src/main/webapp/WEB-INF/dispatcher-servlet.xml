@@ -35,8 +35,11 @@
 		<beans:property name="dataSource" ref="dataSource" />
 		<beans:property name="annotatedClasses">
 			<beans:list>
-				<beans:value>com.experience.entity.TblRole</beans:value>
-				<beans:value>com.experience.entity.TblUser</beans:value>
+				<beans:value>com.experience.entity.Assignrole</beans:value>
+				<beans:value>com.experience.entity.Permission</beans:value>
+				<beans:value>com.experience.entity.Role</beans:value>
+				<beans:value>com.experience.entity.Rolepermission</beans:value>
+				<beans:value>com.experience.entity.User</beans:value>
 			</beans:list>
 		</beans:property>
 		<beans:property name="hibernateProperties">
