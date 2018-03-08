@@ -10,10 +10,10 @@ import com.experience.entity.Role;
 import com.experience.service.RoleService;
 
 @Service
-public class RoleServiceImpl implements RoleService{
+public class RoleServiceImpl implements RoleService {
 
 	@Autowired
-	private  RoleDao roleDao;
+	private RoleDao roleDao;
 
 	public Integer saveRole(Role role) throws Exception {
 		return roleDao.saveRole(role);

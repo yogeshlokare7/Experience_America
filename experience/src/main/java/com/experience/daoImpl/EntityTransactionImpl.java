@@ -2,8 +2,8 @@
  * 
  */
 package com.experience.daoImpl;
-import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Map.Entry;
 
 import org.hibernate.Query;
@@ -143,7 +143,7 @@ public class EntityTransactionImpl <T> {
     
     
     @SuppressWarnings("unchecked")
-	public List<T> getEntityListFromCustomQuery(String query,HashMap<String, String> param,SessionFactory sessionFactory) throws Exception{
+	public List<T> getEntityListFromCustomQuery(String query,Map<String, String> param,SessionFactory sessionFactory) throws Exception{
     	Session session = null;
 		Transaction transaction = null;
 		List<T> list = null;

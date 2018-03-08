@@ -11,6 +11,7 @@ import com.experience.entity.Role;
 @Repository
 public class RoleDaoImpl extends EntityTransactionImpl<Role> implements RoleDao{
 
+
 	Role role = new Role();
 	
 	@Autowired
