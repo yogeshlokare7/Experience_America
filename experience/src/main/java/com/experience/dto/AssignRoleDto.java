@@ -1,5 +1,4 @@
 package com.experience.dto;
- 
 
 public class AssignRoleDto {
 
@@ -9,7 +8,7 @@ public class AssignRoleDto {
 
 	public AssignRoleDto() {
 	}
-
+	
 	public AssignRoleDto(UserDto user, RoleDto role) {
 		this.user = user;
 		this.role = role;

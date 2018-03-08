@@ -11,7 +11,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="role",catalog="experience_america")
+@Table(name="role")
 public class Role  implements java.io.Serializable {
 
 	private static final long serialVersionUID = 1L;

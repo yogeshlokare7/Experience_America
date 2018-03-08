@@ -1,13 +1,13 @@
 package com.experience.daoImpl;
-
 import java.util.List;
-
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-
+import org.springframework.stereotype.Repository;
 import com.experience.dao.AssignRoleDao;
 import com.experience.entity.Assignrole;
 
+
+@Repository
 public class AssignRoleDaoImpl implements AssignRoleDao{
 	
 	@Autowired

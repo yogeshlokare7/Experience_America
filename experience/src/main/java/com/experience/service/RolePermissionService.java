@@ -1,5 +1,4 @@
 package com.experience.service;
-
 import java.util.List;
 
 import com.experience.entity.Rolepermission;
@@ -15,4 +14,5 @@ public interface RolePermissionService {
 	public Rolepermission getRolepermission(Integer RolepermissionId);
 
 	public List<Rolepermission> getRolepermissionList();
+	
 }
