@@ -15,7 +15,7 @@ public class UserController {
 
 	@RequestMapping(value = "/user/view", method = RequestMethod.GET) 
 	public String viewUser() {
-		return "user/view_User";    
+		return "user/view_user";    
 	}
 
 	@RequestMapping(value = "/user/edit/{id}", method = RequestMethod.GET) 
@@ -25,7 +25,7 @@ public class UserController {
 
 	@RequestMapping(value = "/user/delete/{id}", method = RequestMethod.GET) 
 	public String deleteUser(Integer id) {
-		return "user/view_User";    
+		return "user/view_user";    
 	}
 
 }
