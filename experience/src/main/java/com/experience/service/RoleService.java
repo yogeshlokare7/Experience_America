@@ -6,13 +6,13 @@ import com.experience.entity.Role;
 
 public interface RoleService {
 	
-	public Integer saveRole(Role role);
+	public Integer saveRole(Role role) throws Exception;
 
-	public Integer updateRole(Role role);
+	public Role updateRole(Role role) throws Exception;
 
-	public void deleteRole(Role role);
+	public void deleteRole(Role role) throws Exception;
 
-	public Role getRole(Integer roleId);
+	public Role getRole(Integer roleId) throws Exception;
 
-	public List<Role> getRoleList();
+	public List<Role> getRoleList() throws Exception;
 }

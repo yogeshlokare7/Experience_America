@@ -15,23 +15,23 @@ public class RoleServiceImpl implements RoleService{
 	@Autowired
 	private  RoleDao roleDao;
 
-	public Integer saveRole(Role role) {
+	public Integer saveRole(Role role) throws Exception {
 		return roleDao.saveRole(role);
 	}
 
-	public Integer updateRole(Role role) {
+	public Role updateRole(Role role) throws Exception {
 		return roleDao.updateRole(role);
 	}
 
-	public void deleteRole(Role role) {
+	public void deleteRole(Role role) throws Exception {
 		roleDao.deleteRole(role);
 	}
 
-	public Role getRole(Integer roleId) {
+	public Role getRole(Integer roleId) throws Exception {
 		return roleDao.getRole(roleId);
 	}
 
-	public List<Role> getRoleList() {
+	public List<Role> getRoleList() throws Exception {
 		return roleDao.getRoleList();
 	}
 
