@@ -1,9 +1,9 @@
 package com.experience.service;
-
 import java.util.List;
-
+import org.springframework.stereotype.Service;
 import com.experience.entity.User;
 
+@Service
 public interface UserService {
 	
 	public List<User> getUsers();

@@ -16,17 +16,17 @@
 	<div class="menu_section">
 		<h3>General</h3>
 		<ul class="nav side-menu">
-			<li><a><i class="fa fa-home"></i> Dashboard & Report <span class="fa fa-chevron-down"></span></a>
+			<li><a><i class="fa fa-home"></i> Dash Board & Report <span class="fa fa-chevron-down"></span></a>
 				<ul class="nav child_menu">
-					<li><a href="#">Dashboard</a></li>
-					<li><a href="#">Report-1</a></li>
-					<li><a href="#">Report-2</a></li>
+					<li><a href="${pageContext.request.contextPath}/dashboard">Dash Board</a></li>
+					<li><a href="${pageContext.request.contextPath}/viewreport1">Report-1</a></li>
+					<li><a href="${pageContext.request.contextPath}/viewreport2">Report-2</a></li>
 				</ul></li>
 			<li><a><i class="fa fa-edit"></i> User Management <span class="fa fa-chevron-down"></span></a>
 				<ul class="nav child_menu">
-					<li><a href="#">Role Management</a></li>
-					<li><a href="#">Permission Management</a></li>
-					<li><a href="#">User Management</a></li>
+					<li><a href="${pageContext.request.contextPath}/role/view">Role Management</a></li>
+					<li><a href="${pageContext.request.contextPath}/permission/view">Permission Management</a></li>
+					<li><a href="${pageContext.request.contextPath}/user/view">User Management</a></li>
 				</ul></li>
 
 		</ul>

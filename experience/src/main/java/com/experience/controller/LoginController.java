@@ -18,8 +18,6 @@ public class LoginController {
 	@Autowired
 	private LoginService loginService;
 
-	String message = "Welcome to Spring MVC!";
-
 	@RequestMapping(value = "/", method = RequestMethod.GET) 
 	public ModelAndView signIn() {
 		ModelAndView mv = new ModelAndView("signin");
@@ -29,7 +27,6 @@ public class LoginController {
 	@RequestMapping(value="/hello", method = RequestMethod.GET)
 	public ModelAndView showMessage(@RequestParam(value = "name", required = false, defaultValue = "World") String name) {
 		ModelAndView mv = new ModelAndView("helloworld");
-		mv.addObject("message", message);
 		mv.addObject("name", name);
 		return mv;
 	}
