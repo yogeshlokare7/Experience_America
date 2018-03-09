@@ -67,32 +67,32 @@
 							<div class="form-group">
 								<label class="control-label col-md-2 col-sm-2 col-xs-12" for="first-name">First Name <span class="required">*</span></label>
 								<div class="col-md-9 col-sm-10 col-xs-12">
-									<input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12">
+									<input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" autofocus="true" placeholder="First Name" minlength="2" maxlength="30">
 								</div>
 							</div>
 							<div class="form-group">
 								<label class="control-label col-md-2 col-sm-2 col-xs-12" for="first-name">Last Name <span class="required">*</span></label>
 								<div class="col-md-9 col-sm-10 col-xs-12">
-									<input type="text" id="last-name" required="required" class="form-control col-md-7 col-xs-12">
+									<input type="text" id="last-name" required="required" class="form-control col-md-7 col-xs-12" autofocus="true" placeholder="First Name" minlength="2" maxlength="30">
 								</div>
 							</div>
 							<div class="form-group">
 								<label class="control-label col-md-2 col-sm-2 col-xs-12" for="first-name">Email <span class="required">*</span></label>
 								<div class="col-md-9 col-sm-10 col-xs-12">
-									<input type="email" id="email" required="required" class="form-control col-md-7 col-xs-12">
+									<input type="email" id="email" required="required" class="form-control col-md-7 col-xs-12" autofocus="true" placeholder="Last Name" minlength="2" maxlength="30">
 								</div>
 							</div>
 							<div class="form-group">
 								<label class="control-label col-md-2 col-sm-2 col-xs-12" for="first-name">Contact No<span class="required">*</span></label>
 								<div class="col-md-9 col-sm-10 col-xs-12">
-									<input type="tel" id="contactno" required="required" class="form-control col-md-7 col-xs-12">
+									<input type="tel" id="contactno" required="required" class="form-control col-md-7 col-xs-12" autofocus="true" placeholder="Contact No" minlength="2" maxlength="30">
 								</div>
 							</div>
 							<div class="form-group">
 								<label class="control-label col-md-2 col-sm-2 col-xs-12" for="first-name">User Role<span class="required">*</span></label>
 								
 								<div class="col-md-9 col-sm-10 col-xs-12">
-								 <select id="userrole" class="form-control col-md-7 col-xs-12" required>
+								 <select id="userrole" class="form-control col-md-7 col-xs-12" required >
                             		<option value="">Choose..</option>
                            			 <option value="press">Student</option>
                             		<option value="net">Volunteer</option>
@@ -103,12 +103,10 @@
 							</div>
 							</div>
 					</div>
-					<div class="modal-footer">
-						<div class="col-md-6 col-sm-4 col-xs-12 col-md-offset-3 " style="text-align: center;">
-							<button class="btn btn-primary" type="button">Cancel</button>
-							<button type="submit" class="btn btn-success">Submit</button>
-						</div>
-					</div>
+					 <div class="modal-footer">
+                          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
 
 				</div>
 			</div>
