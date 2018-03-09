@@ -6,12 +6,82 @@
 <%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles"%>
 <c:set var="contextPath" value="${pageContext.request.contextPath}" />
 <title>Experience</title>
+<!-- Datatables -->
+<link href="${pageContext.request.contextPath}/resources/css/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
+<link href="${pageContext.request.contextPath}/resources/css/datatables.net-buttons-bs/css/buttons.bootstrap.min.css" rel="stylesheet">
+<link href="${pageContext.request.contextPath}/resources/css/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css" rel="stylesheet">
+<link href="${pageContext.request.contextPath}/resources/css/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
+<link href="${pageContext.request.contextPath}/resources/css/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
 <tiles:insertDefinition name="defaultTemplate">
 	<tiles:putAttribute name="body">
-		<div class="">
-			<div class="page-title">
-				<div class="title_left">
-					<h3>ADD User</h3>
+		<div class="clearfix"></div>
+		<div class="row">
+			<div class="col-md-12 col-sm-12 col-xs-12">
+				<div class="x_panel">
+					<div class="x_title">
+						<h2>Form Design</h2>
+						<ul class="nav navbar-right panel_toolbox">
+							<li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
+
+							<li><a class="close-link"><i class="fa fa-close"></i></a></li>
+						</ul>
+						<div class="clearfix"></div>
+					</div>
+					<div class="x_content">
+						<br />
+						<form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
+
+							<div class="form-group">
+								<label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">First Name <span class="required">*</span>
+								</label>
+								<div class="col-md-6 col-sm-6 col-xs-12">
+									<input type="text" id="firstname" required="required" class="form-control col-md-7 col-xs-12">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Last Name <span class="required">*</span>
+								</label>
+								<div class="col-md-6 col-sm-6 col-xs-12">
+									<input type="text" id="lastname" name="lastname" required="required" class="form-control col-md-7 col-xs-12">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Email<span class="required">*</span></label>
+								<div class="col-md-6 col-sm-6 col-xs-12">
+									<input id="email" class="form-control col-md-7 col-xs-12" type="text" name="middle-name">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-md-3 col-sm-3 col-xs-12">Age<span class="required">*</span></label>
+								<div class="col-md-6 col-sm-6 col-xs-12">
+									<input id="age" class="form-control col-md-7 col-xs-12" type="text" name="age">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-md-3 col-sm-3 col-xs-12">Created On<span class="required">*</span>
+								</label>
+								<div class="col-md-6 col-sm-6 col-xs-12">
+									<input id="createdon" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-md-3 col-sm-3 col-xs-12">Last Login<span class="required">*</span>
+								</label>
+								<div class="col-md-6 col-sm-6 col-xs-12">
+									<input id="lastlogin" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">
+								</div>
+							</div>
+							<div class="ln_solid"></div>
+							<div class="form-group">
+								<div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+									<button class="btn btn-primary" type="button">Cancel</button>
+									<button class="btn btn-primary" type="reset">Reset</button>
+									<button type="submit" class="btn btn-success">Submit</button>
+								</div>
+							</div>
+
+						</form>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -22,3 +92,21 @@
 <script src="${pageContext.request.contextPath}/resources/css/fastclick/lib/fastclick.js"></script>
 <script src="${pageContext.request.contextPath}/resources/css/nprogress/nprogress.js"></script>
 <script src="${pageContext.request.contextPath}/resources/css/build/js/custom.min.js"></script>
+
+<script src="${pageContext.request.contextPath}/resources/css/iCheck/icheck.min.js"></script>
+<!-- Datatables -->
+<script src="${pageContext.request.contextPath}/resources/css/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="${pageContext.request.contextPath}/resources/css/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<script src="${pageContext.request.contextPath}/resources/css/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+<script src="${pageContext.request.contextPath}/resources/css/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+<script src="${pageContext.request.contextPath}/resources/css/datatables.net-buttons/js/buttons.flash.min.js"></script>
+<script src="${pageContext.request.contextPath}/resources/css/datatables.net-buttons/js/buttons.html5.min.js"></script>
+<script src="${pageContext.request.contextPath}/resources/css/datatables.net-buttons/js/buttons.print.min.js"></script>
+<script src="${pageContext.request.contextPath}/resources/css/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js"></script>
+<script src="${pageContext.request.contextPath}/resources/css/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
+<script src="${pageContext.request.contextPath}/resources/css/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+<script src="${pageContext.request.contextPath}/resources/css/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
+<script src="${pageContext.request.contextPath}/resources/css/datatables.net-scroller/js/dataTables.scroller.min.js"></script>
+<script src="${pageContext.request.contextPath}/resources/css/jszip/dist/jszip.min.js"></script>
+<script src="${pageContext.request.contextPath}/resources/css/pdfmake/build/pdfmake.min.js"></script>
+<script src="${pageContext.request.contextPath}/resources/css/pdfmake/build/vfs_fonts.js"></script>
