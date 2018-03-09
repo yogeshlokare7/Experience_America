@@ -39,7 +39,7 @@ public class LoginController {
 
 	//****************************************POST***********************************
 
-	@RequestMapping(value="login",method=RequestMethod.POST)
+	@RequestMapping(value="/login",method=RequestMethod.POST)
 	public String login(@ModelAttribute("User") User user) {
 		try {
 			if(loginService.login(user.getUseremail(), user.getUserpwd())) {
