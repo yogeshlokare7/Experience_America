@@ -30,13 +30,13 @@
       <div class="login_wrapper">
         <div class="animate form login_form">
           <section class="login_content">
-            <form>
+            <form action="LoginController" method="post">
               <h1>Login Form</h1>
               <div>
-                <input type="text" class="form-control" placeholder="Username" required="" />
+                <input type="text" class="form-control" name="useremail" required="" />
               </div>
               <div>
-                <input type="password" class="form-control" placeholder="Password" required="" />
+                <input type="password" class="form-control" name="password" required="" />
               </div>
               <div>
                 <a class="btn btn-default submit" href="${pageContext.request.contextPath}/hello">Log in</a>
@@ -44,14 +44,9 @@
               </div>
 
               <div class="clearfix"></div>
-
               <div class="separator">
-               
-
                 <div class="clearfix"></div>
                 <br />
-
-                
               </div>
             </form>
           </section>

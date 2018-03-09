@@ -20,8 +20,8 @@
 				<a><i class="fa fa-home"></i>Dash Board & Report<span class="fa fa-chevron-down"></span></a>
 				<ul class="nav child_menu">
 					<li><a href="${pageContext.request.contextPath}/dashboard">Dash Board</a></li>
-					<li><a href="${pageContext.request.contextPath}/viewreport1">Report-1</a></li>
-					<li><a href="${pageContext.request.contextPath}/viewreport2">Report-2</a></li>
+					<li><a href="${pageContext.request.contextPath}/dashboard/viewreport1">Report-1</a></li>
+					<li><a href="${pageContext.request.contextPath}/dashboard/viewreport2">Report-2</a></li>
 				</ul>
 			</li>
 				
@@ -37,8 +37,8 @@
 			<li>
 				<a><i class="fa fa-edit"></i>Presenter Profile<span class="fa fa-chevron-down"></span></a>
 				<ul class="nav child_menu">
-					<li><a href="${pageContext.request.contextPath}/presenterprofile/view">Presenter</a></li>
-					<li><a href="${pageContext.request.contextPath}/presenterevent/view">Presenter Events</a></li>
+					<li><a href="${pageContext.request.contextPath}/presenterprofile/add">Presenter</a></li>
+					<li><a href="${pageContext.request.contextPath}/presenterprofile/view">Presenter Events</a></li>
 				</ul>
 			</li>
 			
@@ -46,15 +46,15 @@
 				<a><i class="fa fa-edit"></i>Candidate Management<span class="fa fa-chevron-down"></span></a>
 				<ul class="nav child_menu">
 					<li><a href="${pageContext.request.contextPath}/candidate/add">Candidate</a></li>
-					<li><a href="${pageContext.request.contextPath}/candidate/add">Candidate Event</a></li>
+					<li><a href="${pageContext.request.contextPath}/candidate/view">Candidate Event</a></li>
 				</ul>
 			</li>
 			
 			<li>
 				<a><i class="fa fa-edit"></i>Volunteer and Manager<span class="fa fa-chevron-down"></span></a>
 				<ul class="nav child_menu">
-					<li><a href="${pageContext.request.contextPath}/volunteermanager/view/volunteer">Volunteer</a></li>
-					<li><a href="${pageContext.request.contextPath}/volunteermanager/view/manager">Manager</a></li>
+					<li><a href="${pageContext.request.contextPath}/volunteermanager/add">Volunteer</a></li>
+					<li><a href="${pageContext.request.contextPath}/volunteermanager/view">Manager</a></li>
 				</ul>
 			</li>
 			
