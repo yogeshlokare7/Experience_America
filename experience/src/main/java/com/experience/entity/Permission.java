@@ -59,9 +59,6 @@ public class Permission  implements java.io.Serializable {
 		this.rolepermissions = rolepermissions;
 	}
 
-
-
-
 }
 
 
