@@ -26,7 +26,7 @@
 			</li>
 				
 			<li>
-				<a><i class="fa fa-edit"></i>User Management<span class="fa fa-chevron-down"></span></a>
+				<a><i class="fa fa-users"></i>User Management<span class="fa fa-chevron-down"></span></a>
 				<ul class="nav child_menu">
 					<li><a href="${pageContext.request.contextPath}/role/view">Role Management</a></li>
 					<li><a href="${pageContext.request.contextPath}/permission/view">Permission Management</a></li>
@@ -35,7 +35,7 @@
 			</li>
 				
 			<li>
-				<a><i class="fa fa-edit"></i>Presenter Profile<span class="fa fa-chevron-down"></span></a>
+				<a><i class="fa fa-user"></i>Presenter Profile<span class="fa fa-chevron-down"></span></a>
 				<ul class="nav child_menu">
 					<li><a href="${pageContext.request.contextPath}/presenterprofile/add">Presenter</a></li>
 					<li><a href="${pageContext.request.contextPath}/presenterprofile/view">Presenter Events</a></li>
@@ -43,7 +43,7 @@
 			</li>
 			
 			<li>
-				<a><i class="fa fa-edit"></i>Candidate Management<span class="fa fa-chevron-down"></span></a>
+				<a><i class="fa fa-laptop"></i>Candidate Management<span class="fa fa-chevron-down"></span></a>
 				<ul class="nav child_menu">
 					<li><a href="${pageContext.request.contextPath}/candidate/add">Candidate</a></li>
 					<li><a href="${pageContext.request.contextPath}/candidate/view">Candidate Event</a></li>
@@ -51,7 +51,7 @@
 			</li>
 			
 			<li>
-				<a><i class="fa fa-edit"></i>Volunteer and Manager<span class="fa fa-chevron-down"></span></a>
+				<a><i class="fa fa-microphone"></i>Volunteer and Manager<span class="fa fa-chevron-down"></span></a>
 				<ul class="nav child_menu">
 					<li><a href="${pageContext.request.contextPath}/volunteermanager/add">Volunteer</a></li>
 					<li><a href="${pageContext.request.contextPath}/volunteermanager/view">Manager</a></li>
