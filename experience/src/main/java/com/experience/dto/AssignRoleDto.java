@@ -3,12 +3,15 @@ package com.experience.dto;
 public class AssignRoleDto {
 
 	private Integer id;
+	private Integer userId;
+	private Integer roleId;
+
 	private UserDto user;
 	private RoleDto role;
 
 	public AssignRoleDto() {
 	}
-	
+
 	public AssignRoleDto(UserDto user, RoleDto role) {
 		this.user = user;
 		this.role = role;
@@ -38,6 +41,21 @@ public class AssignRoleDto {
 		this.role = role;
 	}
 
+	public Integer getUserId() {
+		return userId;
+	}
+
+	public void setUserId(Integer userId) {
+		this.userId = userId;
+	}
+
+	public Integer getRoleId() {
+		return roleId;
+	}
+
+	public void setRoleId(Integer roleId) {
+		this.roleId = roleId;
+	}
 }
 
 

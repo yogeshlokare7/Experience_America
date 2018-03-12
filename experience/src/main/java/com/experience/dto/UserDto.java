@@ -3,7 +3,12 @@ import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
- 
+import com.experience.entity.User;
+
+/**
+ * @author Pravin Tumasre
+ *
+ */
 public class UserDto {
 
 	private Integer id;
@@ -35,7 +40,22 @@ public class UserDto {
 		this.lastlogin = lastlogin;
 		this.assignroles = assignroles;
 	}
- 
+
+
+	public UserDto(User user) {
+		setFirstname(user.getFirstname());
+		setLastname(user.getLastname());
+		setUseremail(user.getUseremail());
+		setUserage(user.getUserage());
+		setUserpwd(user.getUserpwd());
+		setUserenabled(user.getUserenabled());
+		setConfirmationtoken(user.getConfirmationtoken());
+		setResettoken(user.getResettoken());
+		setCreatedon(user.getCreatedon());
+		setLastlogin(user.getLastlogin());
+		//setAssignroles(user.getAssignroles());
+	}
+
 	public Integer getId() {
 		return this.id;
 	}
@@ -138,6 +158,11 @@ public class UserDto {
 
 	public void setAssignroles(Set<AssignRoleDto> assignroles) {
 		this.assignroles = assignroles;
+	}
+
+	@Override
+	public String toString() {
+		return "UserDto [id=" + id + ", firstname=" + firstname + ", lastname=" + lastname + ", useremail=" + useremail + ", userage=" + userage + ", userpwd=" + userpwd + ", userenabled=" + userenabled + ", confirmationtoken=" + confirmationtoken + ", resettoken=" + resettoken + ", createdon=" + createdon + ", lastlogin=" + lastlogin + ", assignroles=" + assignroles + "]";
 	}
 
 }

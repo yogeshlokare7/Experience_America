@@ -1,6 +1,8 @@
 package com.experience.dao;
 
+import com.experience.dto.UserDto;
+
 public interface LoginDao {
      
-	 public boolean login(String username, String password) throws Exception;
+	 public UserDto login(String username, String password) throws Exception;
 }

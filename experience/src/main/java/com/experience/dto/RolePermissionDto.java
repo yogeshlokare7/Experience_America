@@ -1,18 +1,13 @@
 package com.experience.dto;
-import static javax.persistence.GenerationType.IDENTITY;
-
-import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 
 @Entity
 public class RolePermissionDto{
 
 	private Integer id;
+	private Integer permissionId;
+	private Integer roleId;
+
 	private PermissionDto permission;
 	private RoleDto role;
 
@@ -47,6 +42,23 @@ public class RolePermissionDto{
 	public void setRole(RoleDto role) {
 		this.role = role;
 	}
+
+	public Integer getPermissionId() {
+		return permissionId;
+	}
+
+	public void setPermissionId(Integer permissionId) {
+		this.permissionId = permissionId;
+	}
+
+	public Integer getRoleId() {
+		return roleId;
+	}
+
+	public void setRoleId(Integer roleId) {
+		this.roleId = roleId;
+	}
+
 }
 
 
