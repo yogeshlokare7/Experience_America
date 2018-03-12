@@ -5,10 +5,7 @@ import java.util.Set;
 
 import com.experience.entity.User;
 
-/**
- * @author Pravin Tumasre
- *
- */
+ 
 public class UserDto {
 
 	private Integer id;

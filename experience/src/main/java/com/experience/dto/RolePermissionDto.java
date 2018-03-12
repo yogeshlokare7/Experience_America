@@ -1,13 +1,10 @@
 package com.experience.dto;
-import javax.persistence.Entity;
 
-@Entity
 public class RolePermissionDto{
 
 	private Integer id;
 	private Integer permissionId;
 	private Integer roleId;
-
 	private PermissionDto permission;
 	private RoleDto role;
 
