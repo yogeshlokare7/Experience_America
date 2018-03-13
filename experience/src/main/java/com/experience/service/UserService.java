@@ -6,6 +6,8 @@ import com.experience.entity.User;
 @Service
 public interface UserService {
 	
+	public final String USER_LIST_QUERY="from User";
+	
 	public List<User> getUsers() throws Exception;
 	
 	public User getUser(Integer id) throws Exception;

@@ -33,6 +33,4 @@ public class VenueDetailsDaoImpl extends EntityTransactionImpl<VenueDetails> imp
 		return getEntityList(new VenueDetails(), sessionFactory);
 	}
 
-	
-
 }

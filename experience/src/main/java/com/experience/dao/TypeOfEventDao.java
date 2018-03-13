@@ -15,4 +15,5 @@ public interface TypeOfEventDao {
 	public TypeOfEvent getTypeOfEvent(Integer typeOfEventId) throws Exception;
 
 	public List<TypeOfEvent> getTypeOfEventList() throws Exception;
+	
 }
