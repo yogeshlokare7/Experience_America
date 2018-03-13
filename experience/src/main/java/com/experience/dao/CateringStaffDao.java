@@ -8,7 +8,7 @@ public interface CateringStaffDao {
 
 	public Integer saveCateringStaff(CateringStaff cateringStaff) throws Exception;
 
-	public Integer updateCateringStaff(CateringStaff cateringStaff) throws Exception;
+	public CateringStaff updateCateringStaff(CateringStaff cateringStaff) throws Exception;
 
 	public void deleteCateringStaff(CateringStaff cateringStaff) throws Exception;
 

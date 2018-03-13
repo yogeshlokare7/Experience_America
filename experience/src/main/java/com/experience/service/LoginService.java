@@ -7,6 +7,6 @@ import com.experience.dto.UserDto;
 @Service
 public interface LoginService {
 	
-	public UserDto login(String username, String password) throws Exception;
+	public boolean login(String username, String password) throws Exception;
 	
 }

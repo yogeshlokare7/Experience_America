@@ -8,7 +8,7 @@ public interface InventoryDao {
 
 	public Integer saveInventory(Inventory inventory) throws Exception;
 
-	public Integer updateInventory(Inventory inventory) throws Exception;
+	public Inventory updateInventory(Inventory inventory) throws Exception;
 
 	public void deleteInventory(Inventory inventory) throws Exception;
 

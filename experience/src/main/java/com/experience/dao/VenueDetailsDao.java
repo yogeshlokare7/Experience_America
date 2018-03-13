@@ -6,14 +6,14 @@ import com.experience.entity.VenueDetails;
 
 public interface VenueDetailsDao {
 	
-	public Integer saveVenueDetails(VenueDetails venueDetails);
+	public Integer saveVenueDetails(VenueDetails venueDetails) throws Exception;
 
-	public Integer updateVenueDetails(VenueDetails venueDetails);
+	public VenueDetails updateVenueDetails(VenueDetails venueDetails) throws Exception;
 
-	public void deleteVenueDetails(VenueDetails venueDetails);
+	public void deleteVenueDetails(VenueDetails venueDetails) throws Exception;
 
-	public VenueDetails getVenueDetails(Integer venueDetailsId);
+	public VenueDetails getVenueDetails(Integer venueDetailsId) throws Exception;
 
-	public List<VenueDetails> getVenueDetailsList();
+	public List<VenueDetails> getVenueDetailsList() throws Exception;
 	
 }

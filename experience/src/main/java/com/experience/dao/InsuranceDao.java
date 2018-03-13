@@ -8,7 +8,7 @@ public interface InsuranceDao {
 	
 	public Integer saveInsurance(Insurance insurance) throws Exception;
 
-	public Integer updateInsurance(Insurance insurance) throws Exception;
+	public Insurance updateInsurance(Insurance insurance) throws Exception;
 
 	public void deleteInsurance(Insurance insurance) throws Exception;
 

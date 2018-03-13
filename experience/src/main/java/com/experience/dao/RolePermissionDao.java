@@ -8,7 +8,7 @@ public interface RolePermissionDao {
 
 	public Integer saveRolepermission(Rolepermission Rolepermission) throws Exception;
 
-	public Integer updateRolepermission(Rolepermission Rolepermission) throws Exception;
+	public Rolepermission updateRolepermission(Rolepermission Rolepermission) throws Exception;
 
 	public void deleteRolepermission(Rolepermission Rolepermission) throws Exception;
 

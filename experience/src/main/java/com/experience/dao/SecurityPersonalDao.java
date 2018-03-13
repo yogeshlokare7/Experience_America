@@ -9,7 +9,7 @@ public interface SecurityPersonalDao {
 	
 	public Integer saveSecurityPersonal(SecurityPersonal securityPersonal) throws Exception;
 
-	public Integer updateSecurityPersonal(SecurityPersonal securityPersonal) throws Exception;
+	public SecurityPersonal updateSecurityPersonal(SecurityPersonal securityPersonal) throws Exception;
 
 	public void deleteSecurityPersonal(SecurityPersonal securityPersonal) throws Exception;
 

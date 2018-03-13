@@ -14,23 +14,23 @@ public class AssignRoleServiceImpl implements AssignRoleService{
 	@Autowired
 	private AssignRoleDao assignRoleDao;
 
-	public Integer saveAssignrole(Assignrole assignrole) {
+	public Integer saveAssignrole(Assignrole assignrole) throws Exception {
 		return assignRoleDao.saveAssignrole(assignrole);
 	}
 
-	public Integer updateAssignrole(Assignrole assignrole) {
+	public Assignrole updateAssignrole(Assignrole assignrole) throws Exception {
 		return assignRoleDao.updateAssignrole(assignrole);
 	}
 
-	public void deleteAssignrole(Assignrole assignrole) {
+	public void deleteAssignrole(Assignrole assignrole) throws Exception {
 		assignRoleDao.deleteAssignrole(assignrole);
 	}
 
-	public Assignrole getAssignrole(Integer assignroleId) {
+	public Assignrole getAssignrole(Integer assignroleId) throws Exception {
 		return assignRoleDao.getAssignrole(assignroleId);
 	}
 
-	public List<Assignrole> getAssignroleList() {
+	public List<Assignrole> getAssignroleList() throws Exception {
 		return assignRoleDao.getAssignroleList();
 	}
 

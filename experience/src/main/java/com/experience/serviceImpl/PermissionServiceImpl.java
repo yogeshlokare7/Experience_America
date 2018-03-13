@@ -14,23 +14,23 @@ public class PermissionServiceImpl implements PermissionDao{
 	@Autowired
 	private PermissionDao permissionDao;
 	
-	public Integer savePermission(Permission permission) {
+	public Integer savePermission(Permission permission) throws Exception {
 		return permissionDao.savePermission(permission);
 	}
 
-	public Integer updatePermission(Permission permission) {
+	public Permission updatePermission(Permission permission) throws Exception {
 		return permissionDao.updatePermission(permission);
 	}
 
-	public void deletePermission(Permission permission) {
+	public void deletePermission(Permission permission)  throws Exception{
 		permissionDao.deletePermission(permission);
 	}
 
-	public Permission getPermission(Integer permissionId) {
+	public Permission getPermission(Integer permissionId) throws Exception {
 		return permissionDao.getPermission(permissionId);
 	}
 
-	public List<Permission> getPermissionList() {
+	public List<Permission> getPermissionList()  throws Exception{
 		return permissionDao.getPermissionList();
 	}
 

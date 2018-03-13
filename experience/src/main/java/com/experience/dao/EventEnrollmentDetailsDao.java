@@ -8,7 +8,7 @@ public interface EventEnrollmentDetailsDao {
 
 	public Integer saveEventEnrollmentDetails(EventEnrollmentDetails eventEnrollmentDetails)  throws Exception;
 
-	public Integer updateEventEnrollmentDetails(EventEnrollmentDetails eventEnrollmentDetails) throws Exception;
+	public EventEnrollmentDetails updateEventEnrollmentDetails(EventEnrollmentDetails eventEnrollmentDetails) throws Exception;
 
 	public void deleteEventEnrollmentDetails(EventEnrollmentDetails eventEnrollmentDetails) throws Exception;
 

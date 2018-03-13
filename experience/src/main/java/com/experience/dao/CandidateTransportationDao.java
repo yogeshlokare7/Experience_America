@@ -8,7 +8,7 @@ public interface CandidateTransportationDao {
 
 	public Integer saveCandidateTransportation(CandidateTransportation candidateTransportation) throws Exception;
 
-	public Integer updateCandidateTransportation(CandidateTransportation candidateTransportation) throws Exception;
+	public CandidateTransportation updateCandidateTransportation(CandidateTransportation candidateTransportation) throws Exception;
 
 	public void deleteCandidateTransportation(CandidateTransportation candidateTransportation) throws Exception;
 

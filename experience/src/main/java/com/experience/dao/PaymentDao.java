@@ -8,7 +8,7 @@ public interface PaymentDao {
 
 	public Integer savePayment(Payment payment) throws Exception;
 
-	public Integer updatePayment(Payment payment) throws Exception;
+	public Payment updatePayment(Payment payment) throws Exception;
 
 	public void deletePayment(Payment payment) throws Exception;
 

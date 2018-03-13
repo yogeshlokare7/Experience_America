@@ -9,7 +9,7 @@ public interface AssignRoleDao {
 
 	public Integer saveAssignrole(Assignrole Assignrole) throws Exception;
 
-	public Integer updateAssignrole(Assignrole Assignrole) throws Exception;
+	public Assignrole updateAssignrole(Assignrole Assignrole) throws Exception;
 
 	public void deleteAssignrole(Assignrole Assignrole) throws Exception;
 

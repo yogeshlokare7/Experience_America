@@ -4,11 +4,11 @@ import java.util.List;
 
 import com.experience.entity.AccommodationType;
 
-public interface AaccommodationTypeDao {
+public interface AccommodationTypeDao {
 	
 	public Integer saveAaccommodationType(AccommodationType accommodationType) throws Exception;
 
-	public Integer updateAaccommodationType(AccommodationType accommodationType) throws Exception;
+	public AccommodationType updateAaccommodationType(AccommodationType accommodationType) throws Exception;
 
 	public void deleteAaccommodationType(AccommodationType accommodationType) throws Exception;
 

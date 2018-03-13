@@ -1,20 +1,50 @@
-package com.experience.dto;
+package com.experience.entity;
 
 import java.util.Date;
- 
-public class CandidateEntityDto {
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+
+@Entity
+@Table(name="candidate")
+public class CandidateEntity {
+
+	@Column(name = "candidate_id")
 	Integer candidateId;
+
+	@Column(name = "candidate_first_name")
 	String candidateFirstName;
+
+	@Column(name = "candidate_last_name")
 	String candidateLastName;
+
+	@Column(name = "date_of_birth")
 	Date dob;
+
+	@Column(name = "gender")
 	String gender;
+
+	@Column(name = "contact_no")
 	String contactNo;
+
+	@Column(name = "candidate_email")
 	String candidateEmail;
+
+	@Column(name = "candidate_address")
 	String candidateAddress;
+
+	@Column(name = "candidate_province")
 	String candidateProvince;
+
+	@Column(name = "candidate_country")
 	String candidateCountry;
+
+	@Column(name = "lattitude")
 	String lattitude;
+
+	@Column(name = "longitude")
 	String longitude;
 
 	public Integer getCandidateId() {

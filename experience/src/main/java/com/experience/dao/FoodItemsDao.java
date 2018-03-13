@@ -8,7 +8,7 @@ public interface FoodItemsDao {
 	
 	public Integer saveFoodItems(FoodItems foodItems) throws Exception;
 
-	public Integer updateFoodItems(FoodItems foodItems) throws Exception;
+	public FoodItems updateFoodItems(FoodItems foodItems) throws Exception;
 
 	public void deleteFoodItems(FoodItems foodItems) throws Exception;
 

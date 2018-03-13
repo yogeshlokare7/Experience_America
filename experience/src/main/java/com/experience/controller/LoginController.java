@@ -1,7 +1,5 @@
 package com.experience.controller;
 
-import javax.servlet.http.HttpServletRequest;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -10,7 +8,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.experience.dto.UserDto;
 import com.experience.entity.User;
 import com.experience.service.LoginService;
 
@@ -21,9 +18,6 @@ public class LoginController {
 	@Autowired
 	private LoginService loginService;
 
-	@Autowired
-	private HttpServletRequest servletRequest; 
-	
 	@RequestMapping(value = "/", method = RequestMethod.GET) 
 	public ModelAndView signIn() {
 		ModelAndView mv = new ModelAndView("signin");
@@ -48,14 +42,11 @@ public class LoginController {
 	@RequestMapping(value="/login",method=RequestMethod.POST)
 	public String login(@ModelAttribute("User") User user) {
 		try {
-			UserDto userDto = loginService.login(user.getUseremail(), user.getUserpwd());
-			servletRequest.getSession().setAttribute("userdto", userDto);
-			if(userDto!=null) {
-				return "redir:/dashboard";
+			if(loginService.login(user.getUseremail(), user.getUserpwd())) {
+				return "redir:/hello";
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
-			return "redir:/login";
 		}
 		return "login";
 	}

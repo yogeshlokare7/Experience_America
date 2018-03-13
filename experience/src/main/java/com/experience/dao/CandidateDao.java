@@ -8,7 +8,7 @@ public interface CandidateDao {
 	
 	public Integer saveCandidate(Candidate candidate) throws Exception;
 
-	public Integer updateCandidate(Candidate candidate) throws Exception;
+	public Candidate updateCandidate(Candidate candidate) throws Exception;
 
 	public void deleteCandidate(Candidate candidate) throws Exception;
 

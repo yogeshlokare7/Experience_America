@@ -24,10 +24,12 @@ public class EntityTransactionImpl <T> {
 			transaction = session.beginTransaction();
 			primary = (Integer) session.save(object);
 			transaction.commit();
+			session.close();
 		}
 		catch (Exception exception) {
 			if(session!=null && transaction!=null) {
 				transaction.rollback();
+				session.close();
 			}
 			throw exception;
 		}finally {
@@ -47,10 +49,12 @@ public class EntityTransactionImpl <T> {
 			transaction = session.beginTransaction();
 			session.delete(object);
 			transaction.commit();
+			session.close();
 		}
 		catch (Exception exception) {
 			if(session!=null && transaction!=null) {
 				transaction.rollback();
+				session.close();
 			}
 			throw exception;
 		}finally {
@@ -69,10 +73,12 @@ public class EntityTransactionImpl <T> {
 			transaction = session.beginTransaction();
 			session.update(object);
 			transaction.commit();
+			session.close();
 		}
 		catch (Exception exception) {
 			if(session!=null && transaction!=null) {
 				transaction.rollback();
+				session.close();
 			}
 			throw exception;
 		}finally {
@@ -93,10 +99,12 @@ public class EntityTransactionImpl <T> {
 			transaction = session.beginTransaction();
 			find = (T) session.get(object.getClass(), primary);
 			transaction.commit();
+			session.close();
 		}
 		catch (Exception exception) {
 			if(session!=null && transaction!=null) {
 				transaction.rollback();
+				session.close();
 			}
 			throw exception;
 		}finally {
@@ -117,10 +125,12 @@ public class EntityTransactionImpl <T> {
 			transaction = session.beginTransaction();
 			list = session.createQuery(" FROM "+t.getClass()).list();
 			transaction.commit();
+			session.close();
 		}
 		catch (Exception exception) {
 			if(session!=null && transaction!=null) {
 				transaction.rollback();
+				session.close();
 			}
 			throw exception;
 		}finally {
@@ -142,14 +152,16 @@ public class EntityTransactionImpl <T> {
 			transaction = session.beginTransaction();
 			Query createQuery = session.createQuery(query);
 			for (Entry<String, String> entrySet : param.entrySet()) {
-				createQuery.setParameter(entrySet.getKey(), entrySet.getValue());
+				createQuery.setParameter(entrySet.getKey(), entrySet.getKey());
 			}
 			list = createQuery.list();
 			transaction.commit();
+			session.close();
 		}
 		catch (Exception exception) {
 			if(session!=null && transaction!=null) {
 				transaction.rollback();
+				session.close();
 			}
 			throw exception;
 		}finally {

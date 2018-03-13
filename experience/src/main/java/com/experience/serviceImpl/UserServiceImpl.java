@@ -15,23 +15,23 @@ public class UserServiceImpl implements UserService{
 	@Autowired
 	private UserDao userDao;
 	
-	public List<User> getUsers() {
+	public List<User> getUsers() throws Exception {
 		return userDao.getUsers();
 	}
 
-	public User getUser(Integer id) {
+	public User getUser(Integer id) throws Exception {
 		return userDao.getUser(id);
 	}
 
-	public User saveUser(User user) {
+	public User saveUser(User user) throws Exception {
 		return userDao.saveUser(user);
 	}
 
-	public void updateUser(User user) {
+	public void updateUser(User user) throws Exception {
 		userDao.updateUser(user);
 	}
 
-	public void deleteUser(Integer id) {
+	public void deleteUser(Integer id) throws Exception {
 		userDao.deleteUser(id);
 	}
 

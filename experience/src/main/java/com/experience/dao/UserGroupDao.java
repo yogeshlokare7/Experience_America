@@ -8,7 +8,7 @@ public interface UserGroupDao {
 	
 	public Integer saveUserGroup(UserGroup userGroup) throws Exception;
 
-	public Integer updateUserGroup(UserGroup userGroup) throws Exception;
+	public UserGroup updateUserGroup(UserGroup userGroup) throws Exception;
 
 	public void deleteUserGroup(UserGroup userGroup) throws Exception;
 

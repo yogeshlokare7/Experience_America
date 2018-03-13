@@ -8,7 +8,7 @@ public interface PaymentTypeDao {
 
 	public Integer savePaymentType(PaymentType paymentType) throws Exception;
 
-	public Integer updatePaymentType(PaymentType paymentType) throws Exception;
+	public PaymentType updatePaymentType(PaymentType paymentType) throws Exception;
 
 	public void deletePaymentType(PaymentType paymentType) throws Exception;
 

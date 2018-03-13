@@ -8,7 +8,7 @@ public interface PermissionDao {
 	
 	public Integer savePermission(Permission permission) throws Exception;
 
-	public Integer updatePermission(Permission permission) throws Exception;
+	public Permission updatePermission(Permission permission) throws Exception;
 
 	public void deletePermission(Permission permission) throws Exception;
 

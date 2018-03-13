@@ -8,7 +8,7 @@ public interface CandidateAllergyDao {
 	
 	public Integer saveCandidateAllergy(CandidateAllergy candidateAllergy) throws Exception;
 
-	public Integer updateCandidateAllergy(CandidateAllergy candidateAllergy) throws Exception;
+	public CandidateAllergy updateCandidateAllergy(CandidateAllergy candidateAllergy) throws Exception;
 
 	public void deleteCandidateAllergy(CandidateAllergy candidateAllergy) throws Exception;
 

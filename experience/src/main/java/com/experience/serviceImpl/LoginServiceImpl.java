@@ -13,7 +13,7 @@ public class LoginServiceImpl implements LoginService{
 	@Autowired
 	private LoginDao dao;
 	
-	public UserDto login(String username, String password) throws Exception {
+	public boolean login(String username, String password) throws Exception {
 		return dao.login(username, password);
 	}
 

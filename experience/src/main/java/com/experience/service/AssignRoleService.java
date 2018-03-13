@@ -8,14 +8,14 @@ import com.experience.entity.Assignrole;
 @Service
 public interface AssignRoleService {
 
-	public Integer saveAssignrole(Assignrole Assignrole);
+	public Integer saveAssignrole(Assignrole Assignrole) throws Exception;
 
-	public Integer updateAssignrole(Assignrole Assignrole);
+	public Assignrole updateAssignrole(Assignrole Assignrole) throws Exception;
 
-	public void deleteAssignrole(Assignrole Assignrole);
+	public void deleteAssignrole(Assignrole Assignrole) throws Exception;
 
-	public Assignrole getAssignrole(Integer AssignroleId);
+	public Assignrole getAssignrole(Integer AssignroleId) throws Exception;
 
-	public List<Assignrole> getAssignroleList();
+	public List<Assignrole> getAssignroleList() throws Exception;
 
 }

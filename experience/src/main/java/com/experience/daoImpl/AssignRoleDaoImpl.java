@@ -1,13 +1,8 @@
 package com.experience.daoImpl;
 import java.util.List;
+
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-
-import org.springframework.stereotype.Repository;
-
-
-
-
 import org.springframework.stereotype.Repository;
 
 import com.experience.dao.AssignRoleDao;
@@ -26,7 +21,7 @@ public class AssignRoleDaoImpl implements AssignRoleDao{
 		return null;
 	}
 
-	public Integer updateAssignrole(Assignrole Assignrole) {
+	public Assignrole updateAssignrole(Assignrole Assignrole) {
 		return null;
 	}
 

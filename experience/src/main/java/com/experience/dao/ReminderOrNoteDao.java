@@ -8,7 +8,7 @@ public interface ReminderOrNoteDao {
 	
 	public Integer saveReminderOrNote(ReminderOrNote reminderOrNote) throws Exception;
 
-	public Integer updateReminderOrNote(ReminderOrNote reminderOrNote) throws Exception;
+	public ReminderOrNote updateReminderOrNote(ReminderOrNote reminderOrNote) throws Exception;
 
 	public void deleteReminderOrNote(ReminderOrNote reminderOrNote) throws Exception;
 

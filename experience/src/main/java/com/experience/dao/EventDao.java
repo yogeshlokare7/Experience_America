@@ -8,7 +8,7 @@ public interface EventDao {
 
 	public Integer saveEvent(Event event) throws Exception;
 
-	public Integer updateEvent(Event event) throws Exception;
+	public Event updateEvent(Event event) throws Exception;
 
 	public void deleteEvent(Event event) throws Exception;
 

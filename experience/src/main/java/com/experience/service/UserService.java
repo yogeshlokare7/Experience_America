@@ -6,14 +6,14 @@ import com.experience.entity.User;
 @Service
 public interface UserService {
 	
-	public List<User> getUsers();
+	public List<User> getUsers() throws Exception;
 	
-	public User getUser(Integer id);
+	public User getUser(Integer id) throws Exception;
 	
-	public User saveUser(User user);
+	public User saveUser(User user) throws Exception;
 	
-	public void updateUser(User user);
+	public void updateUser(User user) throws Exception;
 	
-	public void deleteUser(Integer id);
+	public void deleteUser(Integer id) throws Exception;
 	
 }

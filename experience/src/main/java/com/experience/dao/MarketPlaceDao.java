@@ -8,7 +8,7 @@ public interface MarketPlaceDao {
 	
 	public Integer saveMarketPlace(MarketPlace marketPlace) throws Exception;
 
-	public Integer updateMarketPlace(MarketPlace marketPlace) throws Exception;
+	public MarketPlace updateMarketPlace(MarketPlace marketPlace) throws Exception;
 
 	public void deleteMarketPlace(MarketPlace marketPlace) throws Exception;
 

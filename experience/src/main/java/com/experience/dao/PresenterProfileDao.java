@@ -8,7 +8,7 @@ public interface PresenterProfileDao {
 
 	public Integer savePresenterProfile(PresenterProfile presenterProfile) throws Exception;
 
-	public Integer updatePresenterProfile(PresenterProfile presenterProfile) throws Exception;
+	public PresenterProfile updatePresenterProfile(PresenterProfile presenterProfile) throws Exception;
 
 	public void deletePresenterProfile(PresenterProfile presenterProfile) throws Exception;
 

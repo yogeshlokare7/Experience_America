@@ -6,7 +6,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "security_personnel")
-public class SecurityPersonnel {
+public class SecurityPersonal {
 
 	   @Column(name = "security_personnel_d")
 	   Integer  securityPersonnelId;

@@ -8,7 +8,7 @@ public interface MedicalDao {
 
 	public Integer saveMedical(Medical medical) throws Exception;
 
-	public Integer updateMedical(Medical medical) throws Exception;
+	public Medical updateMedical(Medical medical) throws Exception;
 
 	public void deleteMedical(Medical medical) throws Exception;
 
