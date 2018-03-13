@@ -2,9 +2,12 @@ package com.experience.dto;
 
 import java.util.Date;
 
+import com.experience.entity.Transportation;
+import com.experience.entity.VenueDetails;
+
 public class TransportationDto {
 
-	Integer transport_id;
+	Integer transportId;
 	String name;
 	String vehicleType;
 	Integer vehicleNo;
@@ -12,13 +15,49 @@ public class TransportationDto {
 	String startTime;
 	String endTime;
 	double  fare;
+	
+	
+public TransportationDto() {
+		
+	}
+	
+	public TransportationDto(Transportation transportation) {
+		setTransportId(transportation.getTransportId());
+		setName(transportation.getName());
+		setVehicleType(transportation.getVehicleType());
+		setVehicleNo(transportation.getVehicleNo());
+		setTravelDate(transportation.getTravelDate());
+		setStartTime(transportation.getStartTime());
+		setEndTime(transportation.getEndTime());
+		setFare(transportation.getFare());
+		
+	}
+	public Transportation  getEntityFromDTO() {
+		Transportation transportation= new Transportation ();
+		transportation.setTransportId(getTransportId());
+		transportation.setName(getName());
+		transportation.setVehicleType(getVehicleType());
+		transportation.setVehicleNo(getVehicleNo());
+		transportation.setTravelDate(getTravelDate());
+		transportation.setStartTime(getStartTime());
+		transportation.setEndTime(getEndTime());
+		transportation.setFare(getFare());
+		
+		return transportation;
+	}
+	
+	
+	
 
-	public Integer getTransport_id() {
-		return transport_id;
+	
+	public Integer getTransportId() {
+		return transportId;
 	}
-	public void setTransport_id(Integer transport_id) {
-		this.transport_id = transport_id;
+
+	public void setTransportId(Integer transportId) {
+		this.transportId = transportId;
 	}
+
 	public String getName() {
 		return name;
 	}

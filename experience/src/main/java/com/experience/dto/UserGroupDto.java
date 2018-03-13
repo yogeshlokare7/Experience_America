@@ -1,10 +1,31 @@
 package com.experience.dto;
 
+import com.experience.entity.UserGroup;
+
 public class UserGroupDto {
 	
 	Integer userGroupId;
 	String  name;
 	String details;
+	
+public UserGroupDto() {
+		
+	}
+	
+	public UserGroupDto(UserGroup usergroup) {
+		setUserGroupId(usergroup.getUserGroupId());
+		setName(usergroup.getName());
+		setDetails(usergroup.getDetails());
+		
+	}
+	public UserGroup  getEntityFromDTO() {
+		UserGroup usergroup= new UserGroup();
+		usergroup.setUserGroupId(getUserGroupId());
+		usergroup.setName(getName());
+		usergroup.setDetails(getDetails());
+		
+		return usergroup;
+	}
 	
 	public Integer getUserGroupId() {
 		return userGroupId;

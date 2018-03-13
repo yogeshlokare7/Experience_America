@@ -4,6 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 import com.experience.entity.User;
+import com.experience.entity.VenueDetails;
 
  
 public class UserDto {
@@ -52,7 +53,25 @@ public class UserDto {
 		setLastlogin(user.getLastlogin());
 		//setAssignroles(user.getAssignroles());
 	}
+	
+	
+	public User  getEntityFromDTO() {
+		User user= new User ();
+		user.setFirstname(getFirstname());
+		user.setLastname(getLastname());
+		user.setUseremail(getUseremail());
+		user.setUserage(getUserage());
+		user.setUserpwd(getUserpwd());
+		user.setUserenabled(getUserenabled());
+		user.setConfirmationtoken(getConfirmationtoken());
+		user.setResettoken(getResettoken());
+		user.setCreatedon(getCreatedon());
+		user.setLastlogin(getLastlogin());
+		return user;
+	
+	}
 
+	
 	public Integer getId() {
 		return this.id;
 	}

@@ -41,10 +41,11 @@ public class VenueDetails {
 	public void setLandmark(String landmark) {
 		this.landmark = landmark;
 	}
-	public String getLrovince() {
+
+	public String getProvince() {
 		return province;
 	}
-	public void setLrovince(String province) {
+	public void setProvince(String province) {
 		this.province = province;
 	}
 	public String getCountry() {
