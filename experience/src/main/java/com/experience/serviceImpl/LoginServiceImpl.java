@@ -1,20 +1,21 @@
 package com.experience.serviceImpl;
 
+import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Repository;
 
 import com.experience.dao.LoginDao;
-import com.experience.dto.UserDto;
-import com.experience.service.LoginService;
+import com.experience.entity.LoginEntity;
 
-@Service
-public class LoginServiceImpl implements LoginService{
+@Repository
+public class LoginServiceImpl extends EntityTransactionServiceImpl<LoginEntity>  implements LoginDao {
 
 	@Autowired
-	private LoginDao dao;
-	
+	protected SessionFactory sessionFactory;
+
 	public boolean login(String username, String password) throws Exception {
-		return dao.login(username, password);
+		return false;
 	}
+
 
 }

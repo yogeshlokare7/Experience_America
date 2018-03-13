@@ -12,28 +12,29 @@ import com.experience.entity.Assignrole;
 
 @Repository
 
-public class AssignRoleDaoImpl implements AssignRoleDao{
+public class AssignRoleDaoImpl extends EntityTransactionImpl<Assignrole> implements AssignRoleDao{
 
 	@Autowired
 	private SessionFactory sessionFactory;
 
-	public Integer saveAssignrole(Assignrole Assignrole) {
-		return null;
+	public Integer saveAssignrole(Assignrole Assignrole) throws Exception {
+		return saveEntity(Assignrole, sessionFactory);
 	}
 
-	public Assignrole updateAssignrole(Assignrole Assignrole) {
-		return null;
+	public Assignrole updateAssignrole(Assignrole Assignrole) throws Exception {
+		return updateEntity(Assignrole, sessionFactory);
 	}
 
-	public void deleteAssignrole(Assignrole Assignrole) {
+	public void deleteAssignrole(Assignrole Assignrole) throws Exception {
+		deleteEntity(Assignrole, sessionFactory);
 	}
 
-	public Assignrole getAssignrole(Integer AssignroleId) {
-		return null;
+	public Assignrole getAssignrole(Integer AssignroleId) throws Exception {
+		return getEntity(new Assignrole(), AssignroleId, sessionFactory);
 	}
 
-	public List<Assignrole> getAssignroleList() {
-		return null;
+	public List<Assignrole> getAssignroleList() throws Exception {
+		return getEntityList(new Assignrole(), sessionFactory);
 	}
 
 }

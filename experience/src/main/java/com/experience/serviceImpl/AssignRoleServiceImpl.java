@@ -1,37 +1,40 @@
 package com.experience.serviceImpl;
-
 import java.util.List;
 
+import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
-import com.experience.dao.AssignRoleDao;
 import com.experience.entity.Assignrole;
 import com.experience.service.AssignRoleService;
 
- 
-public class AssignRoleServiceImpl implements AssignRoleService{
+
+
+@Repository
+
+public class AssignRoleServiceImpl extends EntityTransactionServiceImpl<Assignrole> implements AssignRoleService{
 
 	@Autowired
-	private AssignRoleDao assignRoleDao;
+	private SessionFactory sessionFactory;
 
-	public Integer saveAssignrole(Assignrole assignrole) throws Exception {
-		return assignRoleDao.saveAssignrole(assignrole);
+	public Integer saveAssignrole(Assignrole Assignrole) throws Exception {
+		return saveEntity(Assignrole, sessionFactory);
 	}
 
-	public Assignrole updateAssignrole(Assignrole assignrole) throws Exception {
-		return assignRoleDao.updateAssignrole(assignrole);
+	public Assignrole updateAssignrole(Assignrole Assignrole) throws Exception {
+		return updateEntity(Assignrole, sessionFactory);
 	}
 
-	public void deleteAssignrole(Assignrole assignrole) throws Exception {
-		assignRoleDao.deleteAssignrole(assignrole);
+	public void deleteAssignrole(Assignrole Assignrole) throws Exception {
+		deleteEntity(Assignrole, sessionFactory);
 	}
 
-	public Assignrole getAssignrole(Integer assignroleId) throws Exception {
-		return assignRoleDao.getAssignrole(assignroleId);
+	public Assignrole getAssignrole(Integer AssignroleId) throws Exception {
+		return getEntity(new Assignrole(), AssignroleId, sessionFactory);
 	}
 
 	public List<Assignrole> getAssignroleList() throws Exception {
-		return assignRoleDao.getAssignroleList();
+		return getEntityList(new Assignrole(), sessionFactory);
 	}
 
 }
