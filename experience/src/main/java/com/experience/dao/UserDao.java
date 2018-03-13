@@ -8,13 +8,13 @@ public interface UserDao {
 	
 	public final String USER_LIST_QUERY="from User";
 	
-	public List<User> getUsers();
+	public List<User> getUsers() throws Exception;
 	
-	public User getUser(Integer id);
+	public User getUser(Integer id) throws Exception;
 	
-	public User saveUser(User user);
+	public User saveUser(User user) throws Exception;
 	
-	public void updateUser(User user);
+	public void updateUser(User user) throws Exception;
 	
-	public void deleteUser(Integer id);
+	public void deleteUser(Integer id) throws Exception;
 }

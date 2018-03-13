@@ -6,13 +6,13 @@ import com.experience.entity.Rolepermission;
 
 public interface RolePermissionDao {
 
-	public Integer saveRolepermission(Rolepermission Rolepermission);
+	public Integer saveRolepermission(Rolepermission Rolepermission) throws Exception;
 
-	public Integer updateRolepermission(Rolepermission Rolepermission);
+	public Integer updateRolepermission(Rolepermission Rolepermission) throws Exception;
 
-	public void deleteRolepermission(Rolepermission Rolepermission);
+	public void deleteRolepermission(Rolepermission Rolepermission) throws Exception;
 
-	public Rolepermission getRolepermission(Integer RolepermissionId);
+	public Rolepermission getRolepermission(Integer RolepermissionId) throws Exception;
 
-	public List<Rolepermission> getRolepermissionList();
+	public List<Rolepermission> getRolepermissionList() throws Exception;
 }
