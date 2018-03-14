@@ -17,5 +17,4 @@ public class LoginServiceImpl extends EntityTransactionServiceImpl<LoginEntity> 
 		return false;
 	}
 
-
 }

@@ -2,37 +2,37 @@ package com.experience.serviceImpl;
 
 import java.util.List;
 
-import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.experience.dao.CandidateDao;
 import com.experience.entity.Candidate;
 import com.experience.service.CandidateService;
 
 @Repository
-public class CandidateServiceImpl extends EntityTransactionServiceImpl<Candidate> implements CandidateService{
+public class CandidateServiceImpl  implements CandidateService{
 	
 	@Autowired
-	protected SessionFactory sessionFactory;
+	protected CandidateDao candidateDao;
 
 	public Integer saveCandidate(Candidate candidate) throws Exception {
-		return saveEntity(candidate, sessionFactory);
+		return candidateDao.saveCandidate(candidate);
 	}
 
 	public Candidate updateCandidate(Candidate candidate) throws Exception {
-		return updateEntity(candidate, sessionFactory);
+		return candidateDao.updateCandidate(candidate);
 	}
 
 	public void deleteCandidate(Candidate candidate) throws Exception {
-		deleteEntity(candidate, sessionFactory);
+		candidateDao.deleteCandidate(candidate);
 	}
 
 	public Candidate getCandidate(Integer candidateId) throws Exception {
-		return getEntity(new Candidate(), candidateId, sessionFactory);
+		return candidateDao.getCandidate(candidateId);
 	}
 
 	public List<Candidate> getCandidateList() throws Exception {
-		return getEntityList(new Candidate(), sessionFactory);
+		return candidateDao.getCandidateList();
 	}
 	
 	

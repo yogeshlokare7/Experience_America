@@ -2,39 +2,39 @@ package com.experience.serviceImpl;
 
 import java.util.List;
 
-import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.experience.dao.EventEnrollmentDetailsDao;
 import com.experience.entity.EventEnrollmentDetails;
 import com.experience.service.EventEnrollmentDetailsService;
 
 @Repository
-public class EventEnrollmentDetailsServiceImpl extends EntityTransactionServiceImpl<EventEnrollmentDetails> implements EventEnrollmentDetailsService{
+public class EventEnrollmentDetailsServiceImpl  implements EventEnrollmentDetailsService{
 
 	@Autowired
 	
-	protected SessionFactory sessionFactory;
+	protected EventEnrollmentDetailsDao EventEnrollmentDetailsDao ;
 
 	public Integer saveEventEnrollmentDetails(EventEnrollmentDetails eventEnrollmentDetails) throws Exception {
-		return saveEntity(eventEnrollmentDetails, sessionFactory);
+		return EventEnrollmentDetailsDao.saveEventEnrollmentDetails(eventEnrollmentDetails);
 	}
 
 	public EventEnrollmentDetails updateEventEnrollmentDetails(EventEnrollmentDetails eventEnrollmentDetails)
 			throws Exception {
-		return updateEntity(eventEnrollmentDetails, sessionFactory);
+		return EventEnrollmentDetailsDao.updateEventEnrollmentDetails(eventEnrollmentDetails);
 	}
 
 	public void deleteEventEnrollmentDetails(EventEnrollmentDetails eventEnrollmentDetails) throws Exception {
-		deleteEntity(eventEnrollmentDetails, sessionFactory);
+		EventEnrollmentDetailsDao.deleteEventEnrollmentDetails(eventEnrollmentDetails);
 	}
 
 	public EventEnrollmentDetails getEventEnrollmentDetails(Integer eventEnrollmentDetailsId) throws Exception {
-		return getEntity(new EventEnrollmentDetails(), eventEnrollmentDetailsId, sessionFactory);
+		return EventEnrollmentDetailsDao.getEventEnrollmentDetails(eventEnrollmentDetailsId);
 	}
 
 	public List<EventEnrollmentDetails> getEventEnrollmentDetailsList() throws Exception {
-		return getEntityList(new EventEnrollmentDetails(), sessionFactory);
+		return EventEnrollmentDetailsDao.getEventEnrollmentDetailsList();
 	}
 	
 	

@@ -2,37 +2,37 @@ package com.experience.serviceImpl;
 
 import java.util.List;
 
-import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.experience.dao.CateringStaffDao;
 import com.experience.entity.CateringStaff;
 import com.experience.service.CateringStaffService;
 
 @Repository
-public class CateringStaffServiceImpl extends EntityTransactionServiceImpl<CateringStaff> implements CateringStaffService{
+public class CateringStaffServiceImpl  implements CateringStaffService{
 	
 	@Autowired
-	protected SessionFactory sessionFactory;
+	protected CateringStaffDao cateringStaffDao;
 
 	public Integer saveCateringStaff(CateringStaff cateringStaff) throws Exception {
-		return saveEntity(cateringStaff, sessionFactory);
+		return cateringStaffDao.saveCateringStaff(cateringStaff);
 	}
 
 	public CateringStaff updateCateringStaff(CateringStaff cateringStaff) throws Exception {
-		return updateEntity(cateringStaff, sessionFactory);
+		return cateringStaffDao.updateCateringStaff(cateringStaff);
 	}
 
 	public void deleteCateringStaff(CateringStaff cateringStaff) throws Exception {
-		deleteEntity(cateringStaff, sessionFactory);
+		cateringStaffDao.deleteCateringStaff(cateringStaff);
 	}
 
 	public CateringStaff getCateringStaff(Integer cateringStaffId) throws Exception {
-		return getEntity(new CateringStaff(), cateringStaffId, sessionFactory);
+		return cateringStaffDao.getCateringStaff(cateringStaffId);
 	}
 
 	public List<CateringStaff> getCateringStaffList() throws Exception {
-		return getEntityList(new CateringStaff(), sessionFactory);
+		return cateringStaffDao.getCateringStaffList();
 	}
 	
 	

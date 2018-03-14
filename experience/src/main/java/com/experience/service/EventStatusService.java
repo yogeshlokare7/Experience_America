@@ -11,7 +11,7 @@ public interface EventStatusService {
 
 	public Integer saveEventStatus(EventStatus eventStatus) throws Exception;
 
-	public EventStatus updateEventStatus(EventStatus eventStatus) throws Exception;
+	public Integer updateEventStatus(EventStatus eventStatus) throws Exception;
 
 	public void deleteEventStatus(EventStatus eventStatus) throws Exception;
 

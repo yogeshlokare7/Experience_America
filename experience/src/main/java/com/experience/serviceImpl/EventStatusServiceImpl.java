@@ -2,38 +2,40 @@ package com.experience.serviceImpl;
 
 import java.util.List;
 
-import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import com.experience.entity.EventEnrollmentDetails;
-import com.experience.service.EventEnrollmentDetailsService;
+import com.experience.dao.EventStatusDao;
+import com.experience.entity.EventStatus;
+import com.experience.service.EventStatusService;
 
 @Repository
-public class EventStatusServiceImpl extends EntityTransactionServiceImpl<EventEnrollmentDetails> implements EventEnrollmentDetailsService{
+public class EventStatusServiceImpl  implements EventStatusService{
 
 	@Autowired
-	protected SessionFactory sessionFactory;
+	protected EventStatusDao eventStatusDao;
 
-	public Integer saveEventEnrollmentDetails(EventEnrollmentDetails eventEnrollmentDetails) throws Exception {
-		return saveEntity(eventEnrollmentDetails, sessionFactory);
+	public Integer saveEventStatus(EventStatus eventStatus) throws Exception {
+		return eventStatusDao.saveEventStatus(eventStatus);
 	}
 
-	public EventEnrollmentDetails updateEventEnrollmentDetails(EventEnrollmentDetails eventEnrollmentDetails)
-			throws Exception {
-		return updateEntity(eventEnrollmentDetails, sessionFactory);
+	public Integer updateEventStatus(EventStatus eventStatus) throws Exception {
+		return eventStatusDao.updateEventStatus(eventStatus);
 	}
 
-	public void deleteEventEnrollmentDetails(EventEnrollmentDetails eventEnrollmentDetails) throws Exception {
-		deleteEntity(eventEnrollmentDetails, sessionFactory);
+	public void deleteEventStatus(EventStatus eventStatus) throws Exception {
+		eventStatusDao.deleteEventStatus(eventStatus);
 	}
 
-	public EventEnrollmentDetails getEventEnrollmentDetails(Integer eventEnrollmentDetailsId) throws Exception {
-		return getEntity(new EventEnrollmentDetails(), eventEnrollmentDetailsId, sessionFactory);
+	public EventStatus getEventStatus(Integer eventStatusId) throws Exception {
+		// TODO Auto-generated method stub
+		return eventStatusDao.getEventStatus(eventStatusId);
 	}
 
-	public List<EventEnrollmentDetails> getEventEnrollmentDetailsList() throws Exception {
-		return getEntityList(new EventEnrollmentDetails(), sessionFactory);
+	public List<EventStatus> getEventStatusList() throws Exception {
+		return eventStatusDao.getEventStatusList();
 	}
+
+
 	
 }
