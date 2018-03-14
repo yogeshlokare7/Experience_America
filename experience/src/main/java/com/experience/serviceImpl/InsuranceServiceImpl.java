@@ -2,10 +2,10 @@ package com.experience.serviceImpl;
 
 import java.util.List;
 
-import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.experience.dao.InsuranceDao;
 import com.experience.entity.Insurance;
 import com.experience.service.InsuranceService;
 
@@ -13,27 +13,26 @@ import com.experience.service.InsuranceService;
 public class InsuranceServiceImpl extends EntityTransactionServiceImpl<Insurance> implements InsuranceService{
 	
 	@Autowired
-	protected SessionFactory sessionFactory;
+	protected InsuranceDao insuranceDao;
 
 	public Integer saveInsurance(Insurance insurance) throws Exception {
-		return saveEntity(insurance, sessionFactory);
+		return insuranceDao.saveInsurance(insurance);
 	}
 
 	public Insurance updateInsurance(Insurance insurance) throws Exception {
-		return updateEntity(insurance, sessionFactory);
+		return insuranceDao.updateInsurance(insurance);
 	}
 
 	public void deleteInsurance(Insurance insurance) throws Exception {
-		deleteEntity(insurance, sessionFactory);
+		insuranceDao.deleteInsurance(insurance);
 	}
 
 	public Insurance getInsurance(Integer insuranceId) throws Exception {
-		return getEntity(new Insurance(), insuranceId, sessionFactory);
+		return insuranceDao.getInsurance(insuranceId);
 	}
 
 	public List<Insurance> getInsuranceList() throws Exception {
-		return getEntityList(new Insurance(), sessionFactory);
+		return insuranceDao.getInsuranceList();
 	}
-	
 	
 }

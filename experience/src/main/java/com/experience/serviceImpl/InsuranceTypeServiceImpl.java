@@ -34,7 +34,4 @@ public class InsuranceTypeServiceImpl implements InsuranceTypeService{
 	public List<InsuranceType> getInsuranceTypeList() throws Exception {
 		return insuranceTypeDao.getInsuranceTypeList();
 	}
-	
-	
-
 }

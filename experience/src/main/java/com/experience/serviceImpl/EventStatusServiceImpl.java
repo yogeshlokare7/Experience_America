@@ -28,7 +28,6 @@ public class EventStatusServiceImpl  implements EventStatusService{
 	}
 
 	public EventStatus getEventStatus(Integer eventStatusId) throws Exception {
-		// TODO Auto-generated method stub
 		return eventStatusDao.getEventStatus(eventStatusId);
 	}
 
