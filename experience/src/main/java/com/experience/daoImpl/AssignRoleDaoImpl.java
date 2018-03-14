@@ -11,7 +11,6 @@ import com.experience.entity.Assignrole;
 
 
 @Repository
-
 public class AssignRoleDaoImpl extends EntityTransactionImpl<Assignrole> implements AssignRoleDao{
 
 	@Autowired

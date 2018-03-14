@@ -4,16 +4,16 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 
 import com.experience.dao.EventEnrollmentDetailsDao;
 import com.experience.entity.EventEnrollmentDetails;
 import com.experience.service.EventEnrollmentDetailsService;
 
-@Repository
+@Service
 public class EventEnrollmentDetailsServiceImpl  implements EventEnrollmentDetailsService{
 
 	@Autowired
-	
 	protected EventEnrollmentDetailsDao EventEnrollmentDetailsDao ;
 
 	public Integer saveEventEnrollmentDetails(EventEnrollmentDetails eventEnrollmentDetails) throws Exception {

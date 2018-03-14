@@ -5,11 +5,12 @@ import java.util.List;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 
 import com.experience.entity.ReminderOrNote;
 import com.experience.service.ReminderOrNoteService;
 
-@Repository
+@Service
 public class ReminderOrNoteServiceImpl extends EntityTransactionServiceImpl<ReminderOrNote> implements ReminderOrNoteService{
 	
 	@Autowired

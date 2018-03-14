@@ -2,11 +2,13 @@ package com.experience.serviceImpl;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
+
 import com.experience.dao.EventDao;
 import com.experience.entity.Event;
 import com.experience.service.EventService;
 
-@Repository
+@Service
 public class EventServiceImpl  implements EventService{
 
 	@Autowired

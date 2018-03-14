@@ -4,12 +4,13 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 
 import com.experience.dao.PresenterProfileDao;
 import com.experience.entity.PresenterProfile;
 import com.experience.service.PresenterProfileService;
 
-@Repository
+@Service
 public class PresenterProfileServiceImpl implements PresenterProfileService{
 
 	

@@ -4,12 +4,13 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 
 import com.experience.dao.AccommodationTypeDao;
 import com.experience.entity.AccommodationType;
 import com.experience.service.AccommodationTypeService;
 
-@Repository
+@Service
 public class AccommodationTypeServiceImpl  implements AccommodationTypeService{
 	
 	@Autowired

@@ -11,8 +11,9 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 
-@Repository
+@Service
 public class EntityTransactionServiceImpl <T> {
 	
 	public Integer saveEntity(T object,SessionFactory sessionFactory)throws Exception{

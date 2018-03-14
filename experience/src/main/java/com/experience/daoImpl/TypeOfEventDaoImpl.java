@@ -4,10 +4,12 @@ import java.util.List;
 
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
 import com.experience.dao.TypeOfEventDao;
 import com.experience.entity.TypeOfEvent;
 
+@Repository
 public class TypeOfEventDaoImpl extends EntityTransactionImpl<TypeOfEvent> implements TypeOfEventDao{
 
 	@Autowired

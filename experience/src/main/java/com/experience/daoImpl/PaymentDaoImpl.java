@@ -4,10 +4,12 @@ import java.util.List;
 
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
 import com.experience.dao.PaymentDao;
 import com.experience.entity.Payment;
 
+@Repository
 public class PaymentDaoImpl extends EntityTransactionImpl<Payment> implements PaymentDao {
 	
 	@Autowired

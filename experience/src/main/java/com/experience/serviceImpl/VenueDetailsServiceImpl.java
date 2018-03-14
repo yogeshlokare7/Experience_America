@@ -4,12 +4,13 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 
 import com.experience.dao.VenueDetailsDao;
 import com.experience.entity.VenueDetails;
 import com.experience.service.VenueDetailsService;
 
-@Repository
+@Service
 public class VenueDetailsServiceImpl implements VenueDetailsService{
 	
 	@Autowired

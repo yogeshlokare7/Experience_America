@@ -4,10 +4,12 @@ import java.util.List;
 
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
 import com.experience.dao.InsuranceTypeDao;
 import com.experience.entity.InsuranceType;
 
+@Repository
 public class InsuranceTypeDaoImpl extends EntityTransactionImpl<InsuranceType> implements InsuranceTypeDao{
 	
 	@Autowired

@@ -4,14 +4,15 @@ import java.util.List;
 
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
 import com.experience.dao.EventEnrollmentDetailsDao;
 import com.experience.entity.EventEnrollmentDetails;
 
+@Repository
 public class EventEnrollmentDetailsDaoImpl extends EntityTransactionImpl<EventEnrollmentDetails> implements EventEnrollmentDetailsDao{
 
 	@Autowired
-	
 	protected SessionFactory sessionFactory;
 
 	public Integer saveEventEnrollmentDetails(EventEnrollmentDetails eventEnrollmentDetails) throws Exception {

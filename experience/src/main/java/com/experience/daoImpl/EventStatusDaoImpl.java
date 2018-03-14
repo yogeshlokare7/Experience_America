@@ -4,34 +4,43 @@ import java.util.List;
 
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
 import com.experience.dao.EventEnrollmentDetailsDao;
+import com.experience.dao.EventStatusDao;
 import com.experience.entity.EventEnrollmentDetails;
+import com.experience.entity.EventStatus;
 
-public class EventStatusDaoImpl extends EntityTransactionImpl<EventEnrollmentDetails> implements EventEnrollmentDetailsDao{
+@Repository
+public class EventStatusDaoImpl extends EntityTransactionImpl<EventEnrollmentDetails> implements EventStatusDao{
 
 	@Autowired
 	protected SessionFactory sessionFactory;
 
-	public Integer saveEventEnrollmentDetails(EventEnrollmentDetails eventEnrollmentDetails) throws Exception {
-		return saveEntity(eventEnrollmentDetails, sessionFactory);
+	public Integer saveEventStatus(EventStatus eventStatus) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
-	public EventEnrollmentDetails updateEventEnrollmentDetails(EventEnrollmentDetails eventEnrollmentDetails)
-			throws Exception {
-		return updateEntity(eventEnrollmentDetails, sessionFactory);
+	public Integer updateEventStatus(EventStatus eventStatus) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
-	public void deleteEventEnrollmentDetails(EventEnrollmentDetails eventEnrollmentDetails) throws Exception {
-		deleteEntity(eventEnrollmentDetails, sessionFactory);
+	public void deleteEventStatus(EventStatus eventStatus) throws Exception {
+		// TODO Auto-generated method stub
+		
 	}
 
-	public EventEnrollmentDetails getEventEnrollmentDetails(Integer eventEnrollmentDetailsId) throws Exception {
-		return getEntity(new EventEnrollmentDetails(), eventEnrollmentDetailsId, sessionFactory);
+	public EventStatus getEventStatus(Integer eventStatusId) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
-	public List<EventEnrollmentDetails> getEventEnrollmentDetailsList() throws Exception {
-		return getEntityList(new EventEnrollmentDetails(), sessionFactory);
+	public List<EventStatus> getEventStatusList() throws Exception {
+		// TODO Auto-generated method stub
+		return null;
 	}
+
 	
 }

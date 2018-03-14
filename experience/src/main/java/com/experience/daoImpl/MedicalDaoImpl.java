@@ -4,10 +4,12 @@ import java.util.List;
 
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
 import com.experience.dao.MedicalDao;
 import com.experience.entity.Medical;
 
+@Repository
 public class MedicalDaoImpl extends EntityTransactionImpl<Medical> implements MedicalDao {
 	
 	@Autowired

@@ -4,10 +4,12 @@ import java.util.List;
 
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
 import com.experience.dao.CandidateTransportationDao;
 import com.experience.entity.CandidateTransportation;
 
+@Repository
 public class CandidateTransportationDaoImpl extends EntityTransactionImpl<CandidateTransportation> implements CandidateTransportationDao{
 
 	@Autowired

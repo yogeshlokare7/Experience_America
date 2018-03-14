@@ -4,13 +4,14 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 
 import com.experience.dao.TypeOfEventDao;
 import com.experience.entity.TypeOfEvent;
 import com.experience.service.TypeOfEventService;
 
 
-@Repository
+@Service
 public class TypeOfEventServiceImpl implements TypeOfEventService {
 
 	@Autowired

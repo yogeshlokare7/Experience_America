@@ -4,12 +4,13 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 
 import com.experience.dao.CandidateDao;
 import com.experience.entity.Candidate;
 import com.experience.service.CandidateService;
 
-@Repository
+@Service
 public class CandidateServiceImpl  implements CandidateService{
 	
 	@Autowired

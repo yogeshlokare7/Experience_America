@@ -3,6 +3,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 
 import com.experience.dao.AssignRoleDao;
 import com.experience.entity.Assignrole;
@@ -10,8 +11,7 @@ import com.experience.service.AssignRoleService;
 
 
 
-@Repository
-
+@Service
 public class AssignRoleServiceImpl  implements AssignRoleService{
 
 	@Autowired

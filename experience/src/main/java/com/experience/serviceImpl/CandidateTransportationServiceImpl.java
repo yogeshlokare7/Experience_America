@@ -5,12 +5,13 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 
 import com.experience.dao.CandidateTransportationDao;
 import com.experience.entity.CandidateTransportation;
 import com.experience.service.CandidateTransportationService;
 
-@Repository
+@Service
 public class CandidateTransportationServiceImpl implements CandidateTransportationService{
 
 	@Autowired

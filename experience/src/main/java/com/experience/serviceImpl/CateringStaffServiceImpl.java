@@ -4,12 +4,13 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 
 import com.experience.dao.CateringStaffDao;
 import com.experience.entity.CateringStaff;
 import com.experience.service.CateringStaffService;
 
-@Repository
+@Service
 public class CateringStaffServiceImpl  implements CateringStaffService{
 	
 	@Autowired

@@ -4,10 +4,12 @@ import java.util.List;
 
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
 import com.experience.dao.ReminderOrNoteDao;
 import com.experience.entity.ReminderOrNote;
 
+@Repository
 public class ReminderOrNoteDaoImpl extends EntityTransactionImpl<ReminderOrNote> implements ReminderOrNoteDao {
 	
 	@Autowired

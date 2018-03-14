@@ -4,12 +4,13 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 
 import com.experience.dao.InsuranceTypeDao;
 import com.experience.entity.InsuranceType;
 import com.experience.service.InsuranceTypeService;
 
-@Repository
+@Service
 public class InsuranceTypeServiceImpl implements InsuranceTypeService{
 	
 	@Autowired
