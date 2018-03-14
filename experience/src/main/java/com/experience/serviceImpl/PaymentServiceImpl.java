@@ -2,36 +2,36 @@ package com.experience.serviceImpl;
 
 import java.util.List;
 
-import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.experience.dao.PaymentDao;
 import com.experience.entity.Payment;
 import com.experience.service.PaymentService;
 
 @Repository
-public class PaymentServiceImpl extends EntityTransactionServiceImpl<Payment> implements PaymentService{
+public class PaymentServiceImpl implements PaymentService{
 	
 	@Autowired
-	protected SessionFactory sessionFactory;
+	protected PaymentDao paymentDao;
 
 	public Integer savePayment(Payment payment) throws Exception {
-		return saveEntity(payment, sessionFactory);
+		return paymentDao.savePayment(payment);
 	}
 
 	public Payment updatePayment(Payment payment) throws Exception {
-		return updateEntity(payment, sessionFactory);
+		return paymentDao.updatePayment(payment);
 	}
 
 	public void deletePayment(Payment payment) throws Exception {
-		deleteEntity(payment, sessionFactory);
+		paymentDao.deletePayment(payment);
 	}
 
 	public Payment getPayment(Integer paymentId) throws Exception {
-		return getEntity(new Payment(),paymentId, sessionFactory);
+		return paymentDao.getPayment(paymentId);
 	}
 
 	public List<Payment> getPaymentList() throws Exception {
-		return getEntityList(new Payment(), sessionFactory);
+		return paymentDao.getPaymentList();
 	}
 }

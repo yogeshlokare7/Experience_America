@@ -2,38 +2,38 @@ package com.experience.serviceImpl;
 
 import java.util.List;
 
-import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.experience.dao.TypeOfEventDao;
 import com.experience.entity.TypeOfEvent;
 import com.experience.service.TypeOfEventService;
 
 
 @Repository
-public class TypeOfEventServiceImpl extends EntityTransactionServiceImpl<TypeOfEvent> implements TypeOfEventService {
+public class TypeOfEventServiceImpl implements TypeOfEventService {
 
 	@Autowired
-	protected SessionFactory sessionFactory;
+	protected TypeOfEventDao typeOfEventDao;
 
 	public Integer saveTypeOfEvent(TypeOfEvent typeOfEvent) throws Exception {
-		return saveEntity(typeOfEvent, sessionFactory);
+		return typeOfEventDao.saveTypeOfEvent(typeOfEvent);
 	}
 
 	public TypeOfEvent updateTypeOfEvent(TypeOfEvent typeOfEvent) throws Exception {
-		return updateEntity(typeOfEvent, sessionFactory);
+		return typeOfEventDao.updateTypeOfEvent(typeOfEvent); 
 	}
 
 	public void deleteTypeOfEvent(TypeOfEvent typeOfEvent) throws Exception {
-		deleteEntity(typeOfEvent, sessionFactory);
+		typeOfEventDao.deleteTypeOfEvent(typeOfEvent);
 	}
 
 	public TypeOfEvent getTypeOfEvent(Integer typeOfEventId) throws Exception {
-		return getEntity(new TypeOfEvent(), typeOfEventId, sessionFactory);
+		return typeOfEventDao.getTypeOfEvent(typeOfEventId); 
 	}
 
 	public List<TypeOfEvent> getTypeOfEventList() throws Exception {
-		return getEntityList(new TypeOfEvent(), sessionFactory);
+		return typeOfEventDao.getTypeOfEventList(); 
 	}
 
 }

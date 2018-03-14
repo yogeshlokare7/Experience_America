@@ -2,37 +2,37 @@ package com.experience.serviceImpl;
 
 import java.util.List;
 
-import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.experience.dao.InventoryDao;
 import com.experience.entity.Inventory;
 import com.experience.service.InventoryService;
 
 @Repository
-public class InventoryServiceImpl extends EntityTransactionServiceImpl<Inventory> implements InventoryService{
+public class InventoryServiceImpl implements InventoryService{
 	
 	@Autowired
-	protected SessionFactory sessionFactory;
+	protected InventoryDao inventoryDao;
 
 	public Integer saveInventory(Inventory inventory) throws Exception {
-		return saveEntity(inventory, sessionFactory);
+		return inventoryDao.saveInventory(inventory);
 	}
 
 	public Inventory updateInventory(Inventory inventory) throws Exception {
-		return updateEntity(inventory, sessionFactory);
+		return inventoryDao.updateInventory(inventory);
 	}
 
 	public void deleteInventory(Inventory inventory) throws Exception {
-		deleteEntity(inventory, sessionFactory);
+		inventoryDao.deleteInventory(inventory);;
 	}
 
 	public Inventory getInventory(Integer inventoryId) throws Exception {
-		return getEntity(new Inventory(), inventoryId, sessionFactory);
+		return inventoryDao.getInventory(inventoryId);
 	}
 
 	public List<Inventory> getInventoryList() throws Exception {
-		return getEntityList(new Inventory(), sessionFactory);
+		return inventoryDao.getInventoryList();
 	}
 
 }

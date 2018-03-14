@@ -2,37 +2,37 @@ package com.experience.serviceImpl;
 
 import java.util.List;
 
-import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.experience.dao.UserGroupDao;
 import com.experience.entity.UserGroup;
 import com.experience.service.UserGroupService;
 
 @Repository
-public class UserGroupServiceImpl extends EntityTransactionServiceImpl<UserGroup> implements UserGroupService{
+public class UserGroupServiceImpl implements UserGroupService{
 
 	@Autowired
-	private SessionFactory sessionFactory;
+	protected UserGroupDao userGroupDao;
 
 	public Integer saveUserGroup(UserGroup userGroup) throws Exception {
-		return saveEntity(userGroup, sessionFactory);
+		return userGroupDao.saveUserGroup(userGroup);
 	}
 
 	public UserGroup updateUserGroup(UserGroup userGroup) throws Exception {
-		return updateEntity(userGroup, sessionFactory);
+		return userGroupDao.updateUserGroup(userGroup);
 	}
 
 	public void deleteUserGroup(UserGroup userGroup) throws Exception {
-		deleteEntity(userGroup, sessionFactory);
+		userGroupDao.deleteUserGroup(userGroup);
 	}
 
 	public UserGroup getUserGroup(Integer userGroupId) throws Exception {
-		return getEntity(new UserGroup(), userGroupId, sessionFactory);
+		return userGroupDao.getUserGroup(userGroupId);
 	}
 
 	public List<UserGroup> getUserGroupList() throws Exception {
-		return getEntityList(new UserGroup(), sessionFactory);
+		return userGroupDao.getUserGroupList();
 	}
 	
 	

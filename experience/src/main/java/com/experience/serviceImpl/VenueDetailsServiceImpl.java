@@ -2,37 +2,37 @@ package com.experience.serviceImpl;
 
 import java.util.List;
 
-import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.experience.dao.VenueDetailsDao;
 import com.experience.entity.VenueDetails;
 import com.experience.service.VenueDetailsService;
 
 @Repository
-public class VenueDetailsServiceImpl extends EntityTransactionServiceImpl<VenueDetails> implements VenueDetailsService{
+public class VenueDetailsServiceImpl implements VenueDetailsService{
 	
 	@Autowired
-	private SessionFactory sessionFactory;
+	protected VenueDetailsDao venuedetailsDao; 
 
 	public Integer saveVenueDetails(VenueDetails venueDetails) throws Exception {
-		return saveEntity(venueDetails, sessionFactory);
+		return venuedetailsDao.saveVenueDetails(venueDetails);
 	}
 
 	public VenueDetails updateVenueDetails(VenueDetails venueDetails) throws Exception {
-		return updateEntity(venueDetails, sessionFactory);
+		return venuedetailsDao.updateVenueDetails(venueDetails);
 	}
 
 	public void deleteVenueDetails(VenueDetails venueDetails) throws Exception {
-		deleteEntity(venueDetails, sessionFactory);
+		venuedetailsDao.deleteVenueDetails(venueDetails);
 	}
 
 	public VenueDetails getVenueDetails(Integer venueDetailsId) throws Exception {
-		return getEntity(new VenueDetails(),venueDetailsId, sessionFactory);
+		return venuedetailsDao.getVenueDetails(venueDetailsId);
 	}
 
 	public List<VenueDetails> getVenueDetailsList() throws Exception {
-		return getEntityList(new VenueDetails(), sessionFactory);
+		return venuedetailsDao.getVenueDetailsList();
 	}
 
 }

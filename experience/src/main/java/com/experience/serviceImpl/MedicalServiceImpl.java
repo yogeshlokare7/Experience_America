@@ -2,37 +2,37 @@ package com.experience.serviceImpl;
 
 import java.util.List;
 
-import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.experience.dao.MedicalDao;
 import com.experience.entity.Medical;
 import com.experience.service.MedicalService;
 
 @Repository
-public class MedicalServiceImpl extends EntityTransactionServiceImpl<Medical> implements MedicalService{
+public class MedicalServiceImpl implements MedicalService{
 	
 	@Autowired
-	protected SessionFactory sessionFactory;
+	protected MedicalDao medicalDao;
 
 	public Integer saveMedical(Medical medical) throws Exception {
-		return saveEntity(medical, sessionFactory);
+		return medicalDao.saveMedical(medical);
 	}
 
 	public Medical updateMedical(Medical medical) throws Exception {
-		return updateEntity(medical, sessionFactory);
+		return medicalDao.updateMedical(medical);
 	}
 
 	public void deleteMedical(Medical medical) throws Exception {
-		deleteEntity(medical, sessionFactory);
+		medicalDao.deleteMedical(medical);
 	}
 
 	public Medical getMedical(Integer medicalId) throws Exception {
-		return getEntity(new Medical(), medicalId, sessionFactory);
+		return medicalDao.getMedical(medicalId);
 	}
 
 	public List<Medical> getMedicalList() throws Exception {
-		return getEntityList(new Medical(), sessionFactory);
+		return medicalDao.getMedicalList();
 	}
 	
 }
