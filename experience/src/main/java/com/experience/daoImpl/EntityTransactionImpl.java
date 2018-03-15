@@ -24,12 +24,10 @@ public class EntityTransactionImpl <T> {
 			transaction = session.beginTransaction();
 			primary = (Integer) session.save(object);
 			transaction.commit();
-			session.close();
 		}
 		catch (Exception exception) {
 			if(session!=null && transaction!=null) {
 				transaction.rollback();
-				session.close();
 			}
 			throw exception;
 		}finally {
@@ -49,12 +47,10 @@ public class EntityTransactionImpl <T> {
 			transaction = session.beginTransaction();
 			session.delete(object);
 			transaction.commit();
-			session.close();
 		}
 		catch (Exception exception) {
 			if(session!=null && transaction!=null) {
 				transaction.rollback();
-				session.close();
 			}
 			throw exception;
 		}finally {
@@ -73,12 +69,12 @@ public class EntityTransactionImpl <T> {
 			transaction = session.beginTransaction();
 			session.update(object);
 			transaction.commit();
-			session.close();
+			//session.close();
 		}
 		catch (Exception exception) {
 			if(session!=null && transaction!=null) {
 				transaction.rollback();
-				session.close();
+				//session.close();
 			}
 			throw exception;
 		}finally {
@@ -99,12 +95,10 @@ public class EntityTransactionImpl <T> {
 			transaction = session.beginTransaction();
 			find = (T) session.get(object.getClass(), primary);
 			transaction.commit();
-			session.close();
 		}
 		catch (Exception exception) {
 			if(session!=null && transaction!=null) {
 				transaction.rollback();
-				session.close();
 			}
 			throw exception;
 		}finally {
@@ -116,16 +110,16 @@ public class EntityTransactionImpl <T> {
 	}
 
     @SuppressWarnings("unchecked")
-	public List<T> getEntityList(T t,SessionFactory sessionFactory) throws Exception{
+	public List<T> getEntityList(T t, SessionFactory sessionFactory) throws Exception{
     	Session session = null;
 		Transaction transaction = null;
 		List<T> list = null;
 		try {
 			session = sessionFactory.openSession();
 			transaction = session.beginTransaction();
-			list = session.createQuery(" FROM "+t.getClass()).list();
+			list = session.createQuery(" FROM "+t.getClass().getName()).list();
 			transaction.commit();
-			session.close();
+			//session.close();
 		}
 		catch (Exception exception) {
 			if(session!=null && transaction!=null) {

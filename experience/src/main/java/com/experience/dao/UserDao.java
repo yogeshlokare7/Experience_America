@@ -12,9 +12,9 @@ public interface UserDao {
 	
 	public User getUser(Integer id) throws Exception;
 	
-	public User saveUser(User user) throws Exception;
+	public Integer saveUser(User user) throws Exception;
 	
 	public void updateUser(User user) throws Exception;
 	
-	public void deleteUser(Integer id) throws Exception;
+	public void deleteUser(User user) throws Exception;
 }

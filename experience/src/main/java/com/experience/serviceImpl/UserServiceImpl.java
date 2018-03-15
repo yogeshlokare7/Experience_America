@@ -8,44 +8,32 @@ import org.springframework.stereotype.Service;
 
 import com.experience.dao.UserDao;
 import com.experience.entity.User;
+import com.experience.service.UserService;
 
 @Service
-public class UserServiceImpl implements UserDao{
+public class UserServiceImpl implements UserService{
 
- @Autowired
- private SessionFactory sessionFactory;
+	@Autowired
+	private UserDao dao;
 
- @SuppressWarnings("unchecked")
- public List<User> getUsers() {
-  Session session = sessionFactory.openSession();
-  List<User> list = session.createQuery("from User").list();
-  session.close();
-  return list;
- }
+	public List<User> getUsers() throws Exception {
+		return dao.getUsers();
+	}
 
- public User getUser(Integer id) {
-  Session session =  sessionFactory.openSession();
-  User user = (User) session.load(User.class, new Integer(id));
-  return user;
- }
+	public User getUser(Integer id) throws Exception {
+		return dao.getUser(id);
+	}
 
- public User saveUser(User user) {
-  Session session =  sessionFactory.openSession();
-  session.persist(user);
-  return user;
- }
+	public Integer saveUser(User user) throws Exception {
+		return dao.saveUser(user);
+	}
 
- public void updateUser(User user) {
-  Session session =  sessionFactory.openSession();
-  session.update(user);
- }
+	public void updateUser(User user) throws Exception {
+		dao.updateUser(user);
+	}
 
- public void deleteUser(Integer id) {
-  Session session =  sessionFactory.openSession();
-  User user = (User) session.load(User.class, new Integer(id));
-  if (user != null) {
-   session.delete(user);
-  }
- }
+	public void deleteUser(User user) throws Exception {
+		dao.deleteUser(user);
+	}
 
 }

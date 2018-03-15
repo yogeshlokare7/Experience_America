@@ -6,45 +6,35 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.experience.dao.UserDao;
+import com.experience.entity.Accommodation;
 import com.experience.entity.User;
 
 @Repository
-public class UserDaoImpl implements UserDao{
+public class UserDaoImpl extends EntityTransactionImpl<User> implements UserDao{
 
 	@Autowired
-	private SessionFactory sessionFactory;
-
-	@SuppressWarnings("unchecked")
-	public List<User> getUsers() {
-		Session session = sessionFactory.openSession();
-		List<User> list = session.createQuery("from User").list();
-		session.close();
-		return list;
+	protected SessionFactory sessionFactory;
+	
+	public List<User> getUsers() throws Exception {
+		return getEntityList(new User(), sessionFactory);
 	}
 
-	public User getUser(Integer id) {
-		Session session =  sessionFactory.openSession();
-		User user = (User) session.load(User.class, new Integer(id));
-		return user;
+	public User getUser(Integer id) throws Exception {
+		return getEntity(new User(), id, sessionFactory);
 	}
 
-	public User saveUser(User user) {
-		Session session =  sessionFactory.openSession();
-		session.persist(user);
-		return user;
+	public Integer saveUser(User user) throws Exception {
+		return saveEntity(user, sessionFactory);
 	}
 
-	public void updateUser(User user) {
-		Session session =  sessionFactory.openSession();
-		session.update(user);
+	public void updateUser(User user) throws Exception {
+		updateEntity(user, sessionFactory);
 	}
 
-	public void deleteUser(Integer id) {
-		Session session =  sessionFactory.openSession();
-		User user = (User) session.load(User.class, new Integer(id));
-		if (user != null) {
-			session.delete(user);
-		}
+	public void deleteUser(User user) throws Exception {
+		deleteEntity(user, sessionFactory);
 	}
+
+	
 
 }
