@@ -6,7 +6,6 @@ import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import com.experience.dao.EventEnrollmentDetailsDao;
 import com.experience.dao.EventStatusDao;
 import com.experience.entity.EventEnrollmentDetails;
 import com.experience.entity.EventStatus;

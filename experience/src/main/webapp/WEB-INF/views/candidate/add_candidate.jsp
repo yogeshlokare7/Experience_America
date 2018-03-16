@@ -24,9 +24,9 @@
 	rel="stylesheet">
 <tiles:insertDefinition name="defaultTemplate">
 	<tiles:putAttribute name="body">
-        <h3>Candidate List</h3>
-        
-       
+		<h3>Candidate List</h3>
+
+
 		<div class="x_content">
 			<table id="datatable" class="table table-striped table-bordered">
 				<thead>
@@ -80,19 +80,22 @@
 								<label class="control-label col-md-2 col-sm-2 col-xs-12"
 									for="DOB">DOB<span class="required">*</span></label>
 								<div class="col-md-9 col-sm-10 col-xs-12">
-									<input class="form-control col-md-7 col-xs-12" type="date" data-date-inline-picker="true" />
+									<input class="form-control col-md-7 col-xs-12" type="date"
+										data-date-inline-picker="true" />
 								</div>
 							</div>
 
 							<div class="form-group">
-								<label  class="control-label col-md-2 col-sm-2 col-xs-12" for="heard">Gender</label> 
+								<label class="control-label col-md-2 col-sm-2 col-xs-12"
+									for="heard">Gender</label>
 								<div class="col-md-9 col-sm-10 col-xs-12">
-								<select id="heard"class="form-control col-md-7 col-xs-12" required>
-									<option value="">Choose..</option>
-									<option value="press">Male</option>
-									<option value="net">Female</option>
-									<option value="mouth">Other</option>
-								</select>
+									<select id="heard" class="form-control col-md-7 col-xs-12"
+										required>
+										<option value="">Choose..</option>
+										<option value="press">Male</option>
+										<option value="net">Female</option>
+										<option value="mouth">Other</option>
+									</select>
 								</div>
 							</div>
 
@@ -122,36 +125,33 @@
 								</div>
 							</div>
 
-							<div class="form-group">
-								<label class="control-label col-md-2 col-sm-2 col-xs-12"
-									for="province">Province <span class="required">*</span></label>
-								<div class="col-md-9 col-sm-10 col-xs-12">
-								<select id="heard"class="form-control col-md-7 col-xs-12" required>
-									<option value="">Choose..</option>
-									<option value="press">....</option>
-									<option value="net">....</option>
-									<option value="mouth">.....</option>
-								</select>
-								</div>
-							</div>
 
 							<div class="form-group">
-								<label class="control-label col-md-2 col-sm-2 col-xs-12"
-									for="country">Country <span class="required">*</span></label>
+								<label class="control-label col-md-2 col-sm-2 col-xs-12">Country<span
+									class="required">*</span></label>
 								<div class="col-md-9 col-sm-10 col-xs-12">
-									<select id="heard"class="form-control col-md-7 col-xs-12" required>
-									<option value="">Choose..</option>
-									<option value="press">....</option>
-									<option value="net">....</option>
-									<option value="mouth">.....</option>
-								</select>
+									<select id="country" name="country"
+										class="form-control col-md-7 col-xs-12">
+									</select>
+								</div>
+							</div>
+							
+							
+							<div class="form-group">
+								<label class="control-label col-md-2 col-sm-2 col-xs-12"
+									for="province">Province<span class="required">*</span></label>
+								<div class="col-md-9 col-sm-10 col-xs-12">
+									<select id="state" name="state"
+										class="form-control col-md-7 col-xs-12">
+									</select>
 								</div>
 							</div>
 
 							<div class="model-footer">
 								<div class="col-md-6 col-sm-4 col-xs-12 col-md-offset-3 "
 									style="text-align: center;">
-									<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+									<button type="button" class="btn btn-default"
+										data-dismiss="modal">Close</button>
 									<button type="submit" class="btn btn-success">Submit</button>
 								</div>
 							</div>
@@ -161,27 +161,57 @@
 				</div>
 	</tiles:putAttribute>
 </tiles:insertDefinition>
-<script src="${pageContext.request.contextPath}/resources/css/jquery/dist/jquery.min.js"></script>
-<script src="${pageContext.request.contextPath}/resources/css/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="${pageContext.request.contextPath}/resources/css/fastclick/lib/fastclick.js"></script>
-<script src="${pageContext.request.contextPath}/resources/css/nprogress/nprogress.js"></script>
-<script src="${pageContext.request.contextPath}/resources/css/build/js/custom.min.js"></script>
-<script src="${pageContext.request.contextPath}/resources/css/iCheck/icheck.min.js"></script>
+
+<script type="text/javascript"
+	src="${pageContext.request.contextPath}/resources/js/countries.js"></script>
+
+
+<script type="text/javascript">
+	populateCountries("country", "state");
+</script>
+
+<script
+	src="${pageContext.request.contextPath}/resources/css/jquery/dist/jquery.min.js"></script>
+<script
+	src="${pageContext.request.contextPath}/resources/css/bootstrap/dist/js/bootstrap.min.js"></script>
+<script
+	src="${pageContext.request.contextPath}/resources/css/fastclick/lib/fastclick.js"></script>
+<script
+	src="${pageContext.request.contextPath}/resources/css/nprogress/nprogress.js"></script>
+<script
+	src="${pageContext.request.contextPath}/resources/css/build/js/custom.min.js"></script>
+<script
+	src="${pageContext.request.contextPath}/resources/css/iCheck/icheck.min.js"></script>
 <!-- Datatables -->
-<script src="${pageContext.request.contextPath}/resources/css/datatables.net/js/jquery.dataTables.min.js"></script>
-<script src="${pageContext.request.contextPath}/resources/css/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
-<script src="${pageContext.request.contextPath}/resources/css/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
-<script src="${pageContext.request.contextPath}/resources/css/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
-<script src="${pageContext.request.contextPath}/resources/css/datatables.net-buttons/js/buttons.flash.min.js"></script>
-<script src="${pageContext.request.contextPath}/resources/css/datatables.net-buttons/js/buttons.html5.min.js"></script>
-<script src="${pageContext.request.contextPath}/resources/css/datatables.net-buttons/js/buttons.print.min.js"></script>
-<script src="${pageContext.request.contextPath}/resources/css/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js"></script>
-<script src="${pageContext.request.contextPath}/resources/css/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
-<script src="${pageContext.request.contextPath}/resources/css/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
-<script src="${pageContext.request.contextPath}/resources/css/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
-<script src="${pageContext.request.contextPath}/resources/css/datatables.net-scroller/js/dataTables.scroller.min.js"></script>
-<script src="${pageContext.request.contextPath}/resources/css/jszip/dist/jszip.min.js"></script>
-<script src="${pageContext.request.contextPath}/resources/css/pdfmake/build/pdfmake.min.js"></script>
-<script src="${pageContext.request.contextPath}/resources/css/pdfmake/build/vfs_fonts.js"></script>
+<script
+	src="${pageContext.request.contextPath}/resources/css/datatables.net/js/jquery.dataTables.min.js"></script>
+<script
+	src="${pageContext.request.contextPath}/resources/css/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<script
+	src="${pageContext.request.contextPath}/resources/css/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+<script
+	src="${pageContext.request.contextPath}/resources/css/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+<script
+	src="${pageContext.request.contextPath}/resources/css/datatables.net-buttons/js/buttons.flash.min.js"></script>
+<script
+	src="${pageContext.request.contextPath}/resources/css/datatables.net-buttons/js/buttons.html5.min.js"></script>
+<script
+	src="${pageContext.request.contextPath}/resources/css/datatables.net-buttons/js/buttons.print.min.js"></script>
+<script
+	src="${pageContext.request.contextPath}/resources/css/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js"></script>
+<script
+	src="${pageContext.request.contextPath}/resources/css/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
+<script
+	src="${pageContext.request.contextPath}/resources/css/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+<script
+	src="${pageContext.request.contextPath}/resources/css/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
+<script
+	src="${pageContext.request.contextPath}/resources/css/datatables.net-scroller/js/dataTables.scroller.min.js"></script>
+<script
+	src="${pageContext.request.contextPath}/resources/css/jszip/dist/jszip.min.js"></script>
+<script
+	src="${pageContext.request.contextPath}/resources/css/pdfmake/build/pdfmake.min.js"></script>
+<script
+	src="${pageContext.request.contextPath}/resources/css/pdfmake/build/vfs_fonts.js"></script>
 
 

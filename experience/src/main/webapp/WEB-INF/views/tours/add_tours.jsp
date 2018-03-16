@@ -7,11 +7,21 @@
 <c:set var="contextPath" value="${pageContext.request.contextPath}" />
 <title>Experience</title>
 <!-- Datatables -->
-<link href="${pageContext.request.contextPath}/resources/css/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
-<link href="${pageContext.request.contextPath}/resources/css/datatables.net-buttons-bs/css/buttons.bootstrap.min.css" rel="stylesheet">
-<link href="${pageContext.request.contextPath}/resources/css/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css" rel="stylesheet">
-<link href="${pageContext.request.contextPath}/resources/css/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
-<link href="${pageContext.request.contextPath}/resources/css/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
+<link
+	href="${pageContext.request.contextPath}/resources/css/datatables.net-bs/css/dataTables.bootstrap.min.css"
+	rel="stylesheet">
+<link
+	href="${pageContext.request.contextPath}/resources/css/datatables.net-buttons-bs/css/buttons.bootstrap.min.css"
+	rel="stylesheet">
+<link
+	href="${pageContext.request.contextPath}/resources/css/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css"
+	rel="stylesheet">
+<link
+	href="${pageContext.request.contextPath}/resources/css/datatables.net-responsive-bs/css/responsive.bootstrap.min.css"
+	rel="stylesheet">
+<link
+	href="${pageContext.request.contextPath}/resources/css/datatables.net-scroller-bs/css/scroller.bootstrap.min.css"
+	rel="stylesheet">
 <tiles:insertDefinition name="defaultTemplate">
 	<tiles:putAttribute name="body">
 		<div class="clearfix"></div>
@@ -29,31 +39,40 @@
 					</div>
 					<div class="x_content">
 						<br />
-						<form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
+						<form id="demo-form2" data-parsley-validate
+							class="form-horizontal form-label-left">
 
 							<div class="form-group">
-								<label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">First Name <span class="required">*</span>
+								<label class="control-label col-md-3 col-sm-3 col-xs-12"
+									for="first-name">First Name <span class="required">*</span>
 								</label>
 								<div class="col-md-6 col-sm-6 col-xs-12">
-									<input type="text" id="firstname" maxlength="30" required="required" class="form-control col-md-7 col-xs-12">
+									<input type="text" id="firstname" maxlength="30"
+										required="required" class="form-control col-md-7 col-xs-12">
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name"> Last Name <span class="required">*</span>
+								<label class="control-label col-md-3 col-sm-3 col-xs-12"
+									for="last-name"> Last Name <span class="required">*</span>
 								</label>
 								<div class="col-md-6 col-sm-6 col-xs-12">
-									<input type="text" id="lastname" maxlength="30" name="lastname" required="required" class="form-control col-md-7 col-xs-12">
+									<input type="text" id="lastname" maxlength="30" name="lastname"
+										required="required" class="form-control col-md-7 col-xs-12">
 								</div>
 							</div>
 							<div class="form-group">
-								<label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Email<span class="required">*</span></label>
+								<label for="middle-name"
+									class="control-label col-md-3 col-sm-3 col-xs-12">Email<span
+									class="required">*</span></label>
 								<div class="col-md-6 col-sm-6 col-xs-12">
-									<input id="email" maxlength="30" class="form-control col-md-7 col-xs-12" type="text" name="middle-name">
+									<input id="email" maxlength="30"
+										class="form-control col-md-7 col-xs-12" type="text"
+										name="middle-name">
 								</div>
 							</div>
-							
-							
-							
+
+
+
 							<div class="ln_solid"></div>
 							<div class="form-group">
 								<div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
@@ -70,26 +89,47 @@
 		</div>
 	</tiles:putAttribute>
 </tiles:insertDefinition>
-<script src="${pageContext.request.contextPath}/resources/css/jquery/dist/jquery.min.js"></script>
-<script src="${pageContext.request.contextPath}/resources/css/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="${pageContext.request.contextPath}/resources/css/fastclick/lib/fastclick.js"></script>
-<script src="${pageContext.request.contextPath}/resources/css/nprogress/nprogress.js"></script>
-<script src="${pageContext.request.contextPath}/resources/css/build/js/custom.min.js"></script>
+<script
+	src="${pageContext.request.contextPath}/resources/css/jquery/dist/jquery.min.js"></script>
+<script
+	src="${pageContext.request.contextPath}/resources/css/bootstrap/dist/js/bootstrap.min.js"></script>
+<script
+	src="${pageContext.request.contextPath}/resources/css/fastclick/lib/fastclick.js"></script>
+<script
+	src="${pageContext.request.contextPath}/resources/css/nprogress/nprogress.js"></script>
+<script
+	src="${pageContext.request.contextPath}/resources/css/build/js/custom.min.js"></script>
 
-<script src="${pageContext.request.contextPath}/resources/css/iCheck/icheck.min.js"></script>
+<script
+	src="${pageContext.request.contextPath}/resources/css/iCheck/icheck.min.js"></script>
 <!-- Datatables -->
-<script src="${pageContext.request.contextPath}/resources/css/datatables.net/js/jquery.dataTables.min.js"></script>
-<script src="${pageContext.request.contextPath}/resources/css/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
-<script src="${pageContext.request.contextPath}/resources/css/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
-<script src="${pageContext.request.contextPath}/resources/css/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
-<script src="${pageContext.request.contextPath}/resources/css/datatables.net-buttons/js/buttons.flash.min.js"></script>
-<script src="${pageContext.request.contextPath}/resources/css/datatables.net-buttons/js/buttons.html5.min.js"></script>
-<script src="${pageContext.request.contextPath}/resources/css/datatables.net-buttons/js/buttons.print.min.js"></script>
-<script src="${pageContext.request.contextPath}/resources/css/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js"></script>
-<script src="${pageContext.request.contextPath}/resources/css/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
-<script src="${pageContext.request.contextPath}/resources/css/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
-<script src="${pageContext.request.contextPath}/resources/css/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
-<script src="${pageContext.request.contextPath}/resources/css/datatables.net-scroller/js/dataTables.scroller.min.js"></script>
-<script src="${pageContext.request.contextPath}/resources/css/jszip/dist/jszip.min.js"></script>
-<script src="${pageContext.request.contextPath}/resources/css/pdfmake/build/pdfmake.min.js"></script>
-<script src="${pageContext.request.contextPath}/resources/css/pdfmake/build/vfs_fonts.js"></script>
+<script
+	src="${pageContext.request.contextPath}/resources/css/datatables.net/js/jquery.dataTables.min.js"></script>
+<script
+	src="${pageContext.request.contextPath}/resources/css/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<script
+	src="${pageContext.request.contextPath}/resources/css/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+<script
+	src="${pageContext.request.contextPath}/resources/css/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+<script
+	src="${pageContext.request.contextPath}/resources/css/datatables.net-buttons/js/buttons.flash.min.js"></script>
+<script
+	src="${pageContext.request.contextPath}/resources/css/datatables.net-buttons/js/buttons.html5.min.js"></script>
+<script
+	src="${pageContext.request.contextPath}/resources/css/datatables.net-buttons/js/buttons.print.min.js"></script>
+<script
+	src="${pageContext.request.contextPath}/resources/css/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js"></script>
+<script
+	src="${pageContext.request.contextPath}/resources/css/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
+<script
+	src="${pageContext.request.contextPath}/resources/css/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+<script
+	src="${pageContext.request.contextPath}/resources/css/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
+<script
+	src="${pageContext.request.contextPath}/resources/css/datatables.net-scroller/js/dataTables.scroller.min.js"></script>
+<script
+	src="${pageContext.request.contextPath}/resources/css/jszip/dist/jszip.min.js"></script>
+<script
+	src="${pageContext.request.contextPath}/resources/css/pdfmake/build/pdfmake.min.js"></script>
+<script
+	src="${pageContext.request.contextPath}/resources/css/pdfmake/build/vfs_fonts.js"></script>

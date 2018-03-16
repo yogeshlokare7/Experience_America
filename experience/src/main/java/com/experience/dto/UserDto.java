@@ -4,7 +4,6 @@ import java.util.HashSet;
 import java.util.Set;
 
 import com.experience.entity.User;
-import com.experience.entity.VenueDetails;
 
  
 public class UserDto {

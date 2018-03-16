@@ -2,8 +2,6 @@ package com.experience.service;
 
 import org.springframework.stereotype.Service;
 
-import com.experience.dto.UserDto;
-
 @Service
 public interface LoginService {
 	

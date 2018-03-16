@@ -3,7 +3,6 @@ package com.experience.dto;
 import java.util.Date;
 
 import com.experience.entity.Transportation;
-import com.experience.entity.VenueDetails;
 
 public class TransportationDto {
 

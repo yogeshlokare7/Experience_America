@@ -6,6 +6,7 @@ import org.springframework.stereotype.Repository;
 
 import com.experience.dao.RoleDao;
 import com.experience.entity.Role;
+import com.experience.entity.User;
 import com.experience.service.RoleService;
 
 @Repository
@@ -36,5 +37,7 @@ public class RoleServiceImpl implements RoleService{
 	public List<Role> getRoleList() throws Exception {
 		return roleDao.getRoleList();
 	}
+
+
 
 }

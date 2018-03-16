@@ -1,8 +1,10 @@
 package com.experience.controller;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+@Controller
 public class PresenterProfileController{
 
 	@RequestMapping(value = "/presenterprofile/add", method = RequestMethod.GET) 
@@ -24,5 +26,9 @@ public class PresenterProfileController{
 	public String deletePresenterProfile(Integer id) {
 		return "presenterprofile/view_presenterprofile";    
 	}
+	
+	
+	
+	
 	
 }

@@ -24,18 +24,14 @@
 						<th>#</th> -->
 						<th>Id</th>
 						<th>Role</th>
-						<th>Description</th>
-						<th>Active</th>
 					</tr>
 				</thead>
-				<c:forEach items="${role}" var="role">
+				<c:forEach items="${roleList}" var="role">
 					<tr>
 						<!-- <td></td>
 						<td></td> -->
 						<td>${role.id}</td>
 						<td>${role.role}</td>
-						<td>${role.description}</td>
-						<td>${role.active}</td>
 					</tr>
 				</c:forEach>
 				</tbody>
@@ -54,29 +50,33 @@
 						<button type="button" class="close" data-dismiss="modal">
 							<span aria-hidden="true">×</span>
 						</button>
-						<h4 class="modal-title" id="myModalLabel">Create UserRole</h4>
+						<h4 class="modal-title" id="myModalLabel">Create User Role</h4>
 					</div>
+					
+				<form action="${contextPath}/role/saverole" method="POST">
 					<div class="modal-body">
 						<div class="row form-horizontal form-label-left">
-							<div class="form-group">
-								<label class="control-label col-md-2 col-sm-2 col-xs-12" for="first-name">Role<span class="required" > *</span></label>
+							<!-- <div class="form-group">
+								<label class="control-label col-md-2 col-sm-2 col-xs-12" for="first-name">Id<span class="required" > *</span></label>
 								<div class="col-md-9 col-sm-10 col-xs-12">
-									<input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" autofocus="true" placeholder="Role" minlength="2" maxlength="30" >
+								</div>
+							</div> -->
+							<div class="form-group">
+								<label class="control-label col-md-2 col-sm-2 col-xs-12" for="first-name">Role<span class="required">*</span></label>
+								<div class="col-md-9 col-sm-10 col-xs-12">
+									<input type="text" id="role" name="role" required="required" class="form-control col-md-7 col-xs-12" autofocus="true" placeholder="Description" minlength="2" maxlength="70">
 								</div>
 							</div>
-							<div class="form-group">
-								<label class="control-label col-md-2 col-sm-2 col-xs-12" for="first-name">Description <span class="required">*</span></label>
-								<div class="col-md-9 col-sm-10 col-xs-12">
-									<input type="text" id="last-name" required="required" class="form-control col-md-7 col-xs-12" autofocus="true" placeholder="Description" minlength="2" maxlength="70">
-								</div>
 							</div>
-							</div>
-					</div>
-					 <div class="modal-footer">
+					    </div>
+					    
+					    
+					    <div class="modal-footer">
                           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                          <button type="button" class="btn btn-primary">Save changes</button>
+                          <button type="submit" class="btn btn-primary" >Save Changes</button>
                         </div>
-
+                        
+					</form>
 				</div>
 			</div>
 			<!--  -->

@@ -124,7 +124,7 @@ public class EntityTransactionImpl <T> {
 		catch (Exception exception) {
 			if(session!=null && transaction!=null) {
 				transaction.rollback();
-				session.close();
+				//session.close();
 			}
 			throw exception;
 		}finally {

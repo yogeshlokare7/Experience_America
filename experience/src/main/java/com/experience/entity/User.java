@@ -29,14 +29,21 @@ public class User  implements java.io.Serializable {
 	private String resettoken;
 	private Date createdon;
 	private Date lastlogin;
-	private Set<Assignrole> assignroles = new HashSet<Assignrole>(0);
+	private Integer contactNo;
+	private String assignroles;
+	
+	//private Set<Assignrole> assignroles = new HashSet<Assignrole>(0);
 
 	public User() {
 	}
 
-	public User(String firstname, String lastname, String useremail, Integer userage, String userpwd, Byte userenabled, String confirmationtoken, String resettoken, Date createdon, Date lastlogin, Set<Assignrole> assignroles) {
+	public User(String firstname, String lastname, String useremail, Integer userage, 
+				String userpwd, Byte userenabled, String confirmationtoken, 
+				String resettoken, Date createdon, Date lastlogin,// Set<Assignrole> assignroles,
+				String assignroles, Integer contactNo) {
 		this.firstname = firstname;
 		this.lastname = lastname;
+		this.contactNo = contactNo;
 		this.useremail = useremail;
 		this.userage = userage;
 		this.userpwd = userpwd;
@@ -47,6 +54,8 @@ public class User  implements java.io.Serializable {
 		this.lastlogin = lastlogin;
 		this.assignroles = assignroles;
 	}
+
+	
 
 	@Id @GeneratedValue(strategy=IDENTITY)
 
@@ -68,6 +77,15 @@ public class User  implements java.io.Serializable {
 
 	public void setFirstname(String firstname) {
 		this.firstname = firstname;
+	}
+	
+	@Column(name="usercontact", length=50)
+	public Integer getContactNo() {
+		return contactNo;
+	}
+
+	public void setContactNo(Integer contactNo) {
+		this.contactNo = contactNo;
 	}
 
 
@@ -159,19 +177,24 @@ public class User  implements java.io.Serializable {
 	public void setLastlogin(Date lastlogin) {
 		this.lastlogin = lastlogin;
 	}
-
-	@OneToMany(fetch=FetchType.LAZY, mappedBy="user")
-	public Set<Assignrole> getAssignroles() {
-		return this.assignroles;
+	
+	@Column(name="userrole")
+	public String getAssignroles() {
+		return assignroles;
 	}
-
-	public void setAssignroles(Set<Assignrole> assignroles) {
+	
+	public void setAssignroles(String assignroles) {
 		this.assignroles = assignroles;
 	}
-
-
-
-
+//	@OneToMany(fetch=FetchType.LAZY, mappedBy="user")
+//	
+//	public Set<Assignrole> getAssignroles() {
+//		return this.assignroles;
+//	}
+//
+//	public void setAssignroles(Set<Assignrole> assignroles) {
+//		this.assignroles = assignroles;
+//	}
 }
 
 

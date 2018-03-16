@@ -6,14 +6,14 @@ public class RoleDto  implements java.io.Serializable {
 
 	private static final long serialVersionUID = 1L;
 	private Integer id;
-	private Integer role;
+	private String role;
 	private Set<AssignRoleDto> assignroles = new HashSet<AssignRoleDto>(0);
 	private Set<RolePermissionDto> rolepermissions = new HashSet<RolePermissionDto>(0);
 
 	public RoleDto() {
 	}
 
-	public RoleDto(Integer role, Set<AssignRoleDto> assignroles, Set<RolePermissionDto> rolepermissions) {
+	public RoleDto(String role, Set<AssignRoleDto> assignroles, Set<RolePermissionDto> rolepermissions) {
 		this.role = role;
 		this.assignroles = assignroles;
 		this.rolepermissions = rolepermissions;
@@ -27,11 +27,11 @@ public class RoleDto  implements java.io.Serializable {
 		this.id = id;
 	}
 	
-	public Integer getRole() {
+	public String getRole() {
 		return this.role;
 	}
 
-	public void setRole(Integer role) {
+	public void setRole(String role) {
 		this.role = role;
 	}
 

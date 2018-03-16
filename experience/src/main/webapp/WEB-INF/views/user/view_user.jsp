@@ -23,12 +23,12 @@
 					<th></th>
 					<th></th>
 						<th>Id</th>
-						<th>FirstName</th>
-						<th>LastName</th>
+						<th>First Name</th>
+						<th>Last Name</th>
 						<th>Email</th>
 						<th>ContactNo</th>
 						<!-- <th>UserRole</th> -->
-						<th>Active</th>
+						<th>User Role</th>
 					<!-- 	<th>LastLogin</th> -->
 						<!--   <th>AssignRoles</th> -->
 					</tr>
@@ -41,9 +41,10 @@
 						<td>${user.firstname}</td>
 						<td>${user.lastname}</td>
 						<td>${user.useremail}</td>
-						<td>${user.userage}</td>
+						<td>${user.contactNo}</td>
+						<td>${user.assignroles}</td>
 					<%-- 	<td>${user.userrole}</td> --%>
-						<td>${user.userenabled}</td>
+					<%--	<td>${user.userenabled}</td> --%>
 						<%-- <td>${user.lastlogin}</td> --%>
 						<%--  <td>${user.assignroles}</td> --%>
 					</tr>
@@ -70,33 +71,33 @@
 					<form method="POST" action="${contextPath}/user/save">
 						<div class="row form-horizontal form-label-left">
 							<div class="form-group">
-								<label class="control-label col-md-2 col-sm-2 col-xs-12" for="first-name">First Name <span class="required">*</span></label>
+								<label class="control-label col-md-2 col-sm-2 col-xs-12" for="firstname">First Name<span class="required">*</span></label>
 								<div class="col-md-9 col-sm-10 col-xs-12">
-									<input type="text" id="first-name" name="firstname" required="required" class="form-control col-md-7 col-xs-12" autofocus="true" placeholder="First Name" minlength="2" maxlength="30">
+									<input type="text" id="firstname" name="firstname" required="required" class="form-control col-md-7 col-xs-12" autofocus="true" placeholder="First Name" minlength="2" maxlength="30">
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="control-label col-md-2 col-sm-2 col-xs-12" for="first-name">Last Name <span class="required">*</span></label>
+								<label class="control-label col-md-2 col-sm-2 col-xs-12" for="lastname">Last Name <span class="required">*</span></label>
 								<div class="col-md-9 col-sm-10 col-xs-12">
-									<input type="text" id="last-name" name="lastname" required="required" class="form-control col-md-7 col-xs-12" autofocus="true" placeholder="Last Name" minlength="2" maxlength="30">
+									<input type="text" id="lastname" name="lastname" required="required" class="form-control col-md-7 col-xs-12" autofocus="true" placeholder="Last Name" minlength="2" maxlength="30">
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="control-label col-md-2 col-sm-2 col-xs-12" for="first-name">Email <span class="required">*</span></label>
+								<label class="control-label col-md-2 col-sm-2 col-xs-12" for="Email">Email <span class="required">*</span></label>
 								<div class="col-md-9 col-sm-10 col-xs-12">
 									<input type="email" id="email" name="useremail" required="required" class="form-control col-md-7 col-xs-12" autofocus="true" placeholder="Email" minlength="2" maxlength="30">
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="control-label col-md-2 col-sm-2 col-xs-12" for="first-name">Contact No<span class="required">*</span></label>
+								<label class="control-label col-md-2 col-sm-2 col-xs-12" for="ContactNo">Contact No<span class="required">*</span></label>
 								<div class="col-md-9 col-sm-10 col-xs-12">
-									<input type="tel" id="contactno" name="userage" required="required" class="form-control col-md-7 col-xs-12" autofocus="true" placeholder="Contact No" minlength="2" maxlength="30">
+									<input type="tel" id="ContactNo" name="ContactNo" required="required" class="form-control col-md-7 col-xs-12" autofocus="true" placeholder="Contact No" minlength="2" maxlength="30">
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="control-label col-md-2 col-sm-2 col-xs-12" for="first-name">User Role<span class="required">*</span></label>
+								<label class="control-label col-md-2 col-sm-2 col-xs-12" for="assignroles">User Role<span class="required">*</span></label>
 								<div class="col-md-9 col-sm-10 col-xs-12">
-								 <select id="userrole" class="form-control col-md-7 col-xs-12" required >
+								 <select id="assignroles" class="form-control col-md-7 col-xs-12" required name="assignroles">
                             		<option value="">Choose..</option>
                            			 <option value="press">Student</option>
                             		<option value="net">Volunteer</option>
@@ -110,7 +111,7 @@
                           			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                           			<button type="submit" class="btn btn-primary">Save changes</button>
                     		</div>
-                    </form>
+                       </form>
 					</div>
 				</div>
 			</div>

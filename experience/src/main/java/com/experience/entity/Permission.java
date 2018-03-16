@@ -11,7 +11,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="permission",catalog="experience_america")
+@Table(name="permission")
 public class Permission  implements java.io.Serializable {
 
 

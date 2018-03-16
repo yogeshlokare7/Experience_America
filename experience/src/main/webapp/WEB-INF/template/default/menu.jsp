@@ -53,7 +53,7 @@
 			<li>
 				<a><i class="fa fa-taxi"></i>Transportation<span class="fa fa-chevron-down"></span></a>
 				<ul class="nav child_menu">
-					<li><a href="${pageContext.request.contextPath}/presenterprofile/add">Create Profile</a></li>
+					<li><a href="${pageContext.request.contextPath}/presenterprofile/view">Presenter Profile</a></li>
 					<li><a href="${pageContext.request.contextPath}/presenterprofile/add">Pricing Request</a></li>
 					<li><a href="${pageContext.request.contextPath}/presenterprofile/view">Approved Request</a></li>
 					<li><a href="${pageContext.request.contextPath}/presenterprofile/add">Reports</a></li>

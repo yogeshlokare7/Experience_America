@@ -1,7 +1,6 @@
 package com.experience.dto;
 
 import com.experience.entity.TypeOfEvent;
-import com.experience.entity.UserGroup;
 
 public class TypeOfEventDto {
 
